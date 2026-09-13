@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Nuvia">
+  <rect width="48" height="48" rx="10" fill="#f0f7f4"/>
+  <polygon points="10,8 18,8 18,28 28,8 36,8 36,40 28,40 28,20 18,40 10,40" fill="#0d4a35"/>
+  <polygon points="18,8 28,8 28,22 23,28 18,28" fill="#009f6b"/>
+  <polygon points="28,8 36,8 36,22 31,28 28,28" fill="#33b889"/>
+  <polygon points="18,28 28,28 23,22" fill="#007a52"/>
+</svg>

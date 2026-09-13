@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="Canada">
+  <rect width="960" height="480" fill="#fff"/>
+  <rect width="240" height="480" fill="#D52B1E"/>
+  <rect x="720" width="240" height="480" fill="#D52B1E"/>
+  <path fill="#D52B1E" d="M480 120l-24 74h-78l63 46-24 74 63-46 63 46-24-74 63-46h-78z"/>
+</svg>
