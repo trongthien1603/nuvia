@@ -8,9 +8,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initContactForm();
 
+  initImageSlideshows();
+
   applySiteConfig();
 
 });
+
+
+
+function initImageSlideshows() {
+  if (typeof SLIDESHOW_IMAGES === "undefined" || !SLIDESHOW_IMAGES.length) return;
+
+  document.querySelectorAll(".image-slideshow").forEach((slideshow) => {
+    if (slideshow.querySelector(".hero-slide")) return;
+
+    SLIDESHOW_IMAGES.forEach((src, i) => {
+      const img = document.createElement("img");
+      img.className = "hero-slide" + (i === 0 ? " active" : "");
+      img.src = src;
+      img.alt = "Canada";
+      img.width = 800;
+      img.height = 600;
+      img.loading = i === 0 ? "eager" : "lazy";
+      slideshow.appendChild(img);
+    });
+
+    const slides = slideshow.querySelectorAll(".hero-slide");
+    if (slides.length < 2) return;
+
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 3000);
+  });
+}
 
 
 

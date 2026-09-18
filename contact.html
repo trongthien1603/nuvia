@@ -34,10 +34,6 @@
         <div class="logo-mark">
           <img src="assets/logo.png" alt="" width="44" height="44">
         </div>
-        <div class="logo-text">
-          <span class="logo-name">Nuvia Immigration</span>
-          <span class="logo-tagline" data-i18n="footer.tagline">Regulated Canadian Immigration Consultants</span>
-        </div>
       </a>
 
       <div class="header-actions">
@@ -52,15 +48,17 @@
 
           <a href="about.html" data-i18n="nav.about">About</a>
 
+          <a href="resources.html" data-i18n="nav.resources">Resources</a>
+
           <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
 
-          <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book Consultation</a>
+          <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book my free consultation</a>
 
         </nav>
 
         <div class="lang-switcher" role="group" aria-label="Language">
 
-          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true"><img src="assets/flags/ca.svg" alt="" class="lang-flag" width="22" height="15"> EN</button>
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true"><img src="assets/flags/en.svg" alt="" class="lang-flag" width="22" height="15"> EN</button>
 
           <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false"><img src="assets/flags/fr.svg" alt="" class="lang-flag" width="22" height="15"> FR</button>
 
@@ -87,6 +85,8 @@
       <a href="fees.html" data-i18n="nav.fees">Fees</a>
 
       <a href="about.html" data-i18n="nav.about">About</a>
+
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
 
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
 
@@ -188,9 +188,15 @@
 
           <div class="social-links">
 
-            <a href="https://wa.me/15148958603" class="social-btn whatsapp" data-config="whatsapp" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp">WhatsApp</a>
+            <a href="https://wa.me/15148958603" class="social-link-card whatsapp" data-config="whatsapp" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/whatsapp.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.whatsapp">WhatsApp</span>
+            </a>
 
-            <a href="https://zalo.me/15148958603" class="social-btn zalo" data-config="zalo" target="_blank" rel="noopener noreferrer" data-i18n="contact.zalo">Zalo</a>
+            <a href="https://zalo.me/15148958603" class="social-link-card zalo" data-config="zalo" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/zalo.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.zalo">Zalo</span>
+            </a>
 
           </div>
 
@@ -202,7 +208,7 @@
 
           <div class="contact-tabs" id="book">
 
-            <button type="button" class="contact-tab active" data-tab="booking" data-i18n="contact.tab.booking">Book Online (Google Calendar)</button>
+            <button type="button" class="contact-tab active" data-tab="booking" data-i18n="contact.tab.booking">Book my free consultation</button>
 
             <button type="button" class="contact-tab" data-tab="form" data-i18n="contact.tab.form">Send a Message</button>
 
@@ -392,9 +398,16 @@
 
           <a href="tel:+15148958603" data-config="phone">+1 (514) 895-8603</a>
 
-          <a href="https://wa.me/15148958603" data-config="whatsapp" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp">WhatsApp</a>
-
-          <a href="https://zalo.me/15148958603" data-config="zalo" target="_blank" rel="noopener noreferrer" data-i18n="contact.zalo">Zalo</a>
+          <div class="footer-social">
+            <a href="https://wa.me/15148958603" class="social-link-card whatsapp" data-config="whatsapp" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/whatsapp.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.whatsapp">WhatsApp</span>
+            </a>
+            <a href="https://zalo.me/15148958603" class="social-link-card zalo" data-config="zalo" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/zalo.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.zalo">Zalo</span>
+            </a>
+          </div>
 
           <span class="footer-text" data-config="location">Montreal, Quebec, Canada</span>
 
@@ -431,6 +444,7 @@
   <script src="js/i18n.js"></script>
 
   <script src="js/main.js"></script>
+  <script src="js/site-chrome.js"></script>
 
 </body>
 

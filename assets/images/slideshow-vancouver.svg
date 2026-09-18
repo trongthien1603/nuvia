@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Canadian mountains and coast">
+  <defs>
+    <linearGradient id="sky-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6eb5d0"/>
+      <stop offset="100%" stop-color="#b8dce8"/>
+    </linearGradient>
+    <linearGradient id="mtn-v" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#1a3d32"/>
+      <stop offset="100%" stop-color="#5a8a7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky-v)"/>
+  <ellipse cx="400" cy="520" rx="450" ry="70" fill="#009f6b" opacity="0.85"/>
+  <polygon points="0,400 100,250 200,320 350,180 500,280 650,150 800,220 800,600 0,600" fill="url(#mtn-v)"/>
+  <polygon points="200,350 350,200 500,350" fill="#fff" opacity="0.9"/>
+  <polygon points="450,320 580,180 700,300" fill="#fff" opacity="0.7"/>
+  <rect x="580" y="380" width="120" height="80" rx="4" fill="#2c3e50" opacity="0.6"/>
+  <circle cx="680" cy="90" r="40" fill="#FFE082"/>
+</svg>

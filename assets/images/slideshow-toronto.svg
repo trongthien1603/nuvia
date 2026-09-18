@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Toronto skyline">
+  <defs>
+    <linearGradient id="sky-t" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a4a"/>
+      <stop offset="100%" stop-color="#4a6a8a"/>
+    </linearGradient>
+    <linearGradient id="water-t" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d3d5c"/>
+      <stop offset="100%" stop-color="#062a40"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky-t)"/>
+  <rect y="420" width="800" height="180" fill="url(#water-t)"/>
+  <rect x="120" y="280" width="55" height="140" fill="#2c3e50"/>
+  <rect x="190" y="220" width="70" height="200" fill="#34495e"/>
+  <rect x="280" y="180" width="45" height="240" fill="#2c3e50"/>
+  <rect x="350" y="120" width="90" height="300" fill="#ecf0f1"/>
+  <rect x="380" y="80" width="30" height="340" fill="#bdc3c7"/>
+  <rect x="460" y="200" width="60" height="220" fill="#34495e"/>
+  <rect x="540" y="250" width="80" height="170" fill="#2c3e50"/>
+  <rect x="640" y="190" width="50" height="230" fill="#34495e"/>
+  <circle cx="395" cy="95" r="8" fill="#e74c3c"/>
+  <ellipse cx="400" cy="430" rx="350" ry="15" fill="rgba(255,255,255,0.05)"/>
+</svg>

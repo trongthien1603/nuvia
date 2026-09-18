@@ -17,10 +17,6 @@
         <div class="logo-mark">
           <img src="assets/logo.png" alt="" width="44" height="44">
         </div>
-        <div class="logo-text">
-          <span class="logo-name">Nuvia Immigration</span>
-          <span class="logo-tagline" data-i18n="footer.tagline">Regulated Canadian Immigration Consultants</span>
-        </div>
       </a>
       <div class="header-actions">
         <nav class="nav-desktop">
@@ -28,11 +24,12 @@
           <a href="services.html" data-i18n="nav.services">Services</a>
           <a href="fees.html" data-i18n="nav.fees">Fees</a>
           <a href="about.html" class="active" data-i18n="nav.about">About</a>
+          <a href="resources.html" data-i18n="nav.resources">Resources</a>
           <a href="contact.html" data-i18n="nav.contact">Contact</a>
-          <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book Consultation</a>
+          <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book my free consultation</a>
         </nav>
         <div class="lang-switcher" role="group" aria-label="Language">
-          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true"><img src="assets/flags/ca.svg" alt="" class="lang-flag" width="22" height="15"> EN</button>
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true"><img src="assets/flags/en.svg" alt="" class="lang-flag" width="22" height="15"> EN</button>
           <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false"><img src="assets/flags/fr.svg" alt="" class="lang-flag" width="22" height="15"> FR</button>
           <button type="button" class="lang-btn" data-lang="vi" aria-pressed="false"><img src="assets/flags/vi.svg" alt="" class="lang-flag" width="22" height="15"> VI</button>
         </div>
@@ -46,6 +43,7 @@
       <a href="services.html" data-i18n="nav.services">Services</a>
       <a href="fees.html" data-i18n="nav.fees">Fees</a>
       <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
@@ -61,7 +59,7 @@
     <section>
       <div class="container about-grid">
         <div class="about-image">
-          <img src="assets/images/consultation.jpg" alt="Nuvia Immigration Consulting" width="600" height="750" loading="lazy">
+          <div class="about-slideshow image-slideshow" aria-label="Canada"></div>
         </div>
         <div>
           <span class="section-label" data-i18n="about.mission.label">Our Mission</span>
@@ -108,17 +106,18 @@
           <span class="section-label" data-i18n="about.rcic.label">Lead Consultant</span>
           <h2 data-i18n="about.rcic.title">Meet Your RCIC</h2>
         </div>
+        <p class="consultant-intro" data-i18n="about.rcic.intro">At Nuvia Immigration Consulting, our licensed RCIC leads every case with personalized support through each step of your journey to Canada — from Express Entry and provincial programs to family sponsorship and complex refusals.</p>
         <div class="card consultant-card">
           <div class="consultant-photo">
-            <img src="assets/images/consultation.jpg" alt="Thien Pham, RCIC-IRB" width="240" height="320" loading="lazy">
+            <img src="assets/images/consultant.jpg" alt="Thien Pham, RCIC-IRB" width="240" height="320" loading="lazy">
           </div>
           <div>
-            <h3 data-i18n="about.rcic.name">Thien Pham, RCIC-IRB</h3>
-            <p style="color: var(--color-teal); font-weight: 600; margin-bottom: 0.5rem;" data-i18n="about.rcic.role">Owner & Founder, Nuvia Immigration Consulting</p>
-            <p style="color: var(--color-teal); font-weight: 600; margin-bottom: 1rem;" data-i18n="about.rcic.license">CICC License #R1040752 (Class L3 — Unrestricted Practice)</p>
-            <p data-i18n="about.rcic.p1">Thien Pham is a member in good standing with the College of Immigration and Citizenship Consultants (CICC) and a certified Regulated Canadian Immigration Consultant.</p>
-            <p data-i18n="about.rcic.p2">Mr. Pham holds the Class L3 RCIC-IRB — Unrestricted Practice license, authorizing representation before Immigration, Refugees and Citizenship Canada (IRCC) and the Immigration and Refugee Board of Canada (IRB).</p>
-            <p data-i18n="about.rcic.p3">With experience across economic immigration, family sponsorship, study and work permits, and complex refusal cases, Mr. Pham provides personalized strategies grounded in current Canadian immigration law and policy.</p>
+            <h3 data-i18n="about.rcic.name">Thien Pham</h3>
+            <p class="consultant-title" data-i18n="about.rcic.titleline">Owner & Founder | RCIC-IRB | Regulated Canadian Immigration Consultant</p>
+            <p data-i18n="about.rcic.p1">Thien Pham is the Owner and Founder of Nuvia Immigration Consulting and a Regulated Canadian Immigration Consultant (RCIC) recognized by the College of Immigration and Citizenship Consultants (CICC). He helps individuals and families navigate Canada's immigration system with clarity, integrity, and care.</p>
+            <p data-i18n="about.rcic.p2">Mr. Pham holds a Class L3 RCIC-IRB — Unrestricted Practice licence (CICC #R1040752), authorizing representation before Immigration, Refugees and Citizenship Canada (IRCC) and the Immigration and Refugee Board of Canada (IRB).</p>
+            <p data-i18n="about.rcic.p3">He specializes in economic immigration, provincial nominee programs, study and work permits, family sponsorship, and refusal or restoration cases — providing strategic guidance tailored to each client's background and goals.</p>
+            <p data-i18n="about.rcic.p4">Fluent in English, French, and Vietnamese, Mr. Pham is committed to helping clients from diverse backgrounds understand complex immigration processes with confidence. You are welcome to verify his credentials at any time on the CICC public register.</p>
             <ul class="consultant-credentials">
               <li data-i18n="about.rcic.c1">Licensed RCIC-IRB in good standing with CICC</li>
               <li data-i18n="about.rcic.c2">Class L3 — Unrestricted Practice (IRCC & IRB)</li>
@@ -175,8 +174,16 @@
           <h4 data-i18n="footer.contact">Contact</h4>
           <a href="mailto:nuvia.immigration@gmail.com" data-config="email">nuvia.immigration@gmail.com</a>
           <a href="tel:+15148958603" data-config="phone">+1 (514) 895-8603</a>
-          <a href="https://wa.me/15148958603" data-config="whatsapp" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp">WhatsApp</a>
-          <a href="https://zalo.me/15148958603" data-config="zalo" target="_blank" rel="noopener noreferrer" data-i18n="contact.zalo">Zalo</a>
+          <div class="footer-social">
+            <a href="https://wa.me/15148958603" class="social-link-card whatsapp" data-config="whatsapp" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/whatsapp.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.whatsapp">WhatsApp</span>
+            </a>
+            <a href="https://zalo.me/15148958603" class="social-link-card zalo" data-config="zalo" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/zalo.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.zalo">Zalo</span>
+            </a>
+          </div>
           <span class="footer-text" data-config="location">Montreal, Quebec, Canada</span>
         </div>
       </div>
@@ -192,8 +199,10 @@
   </footer>
 
   <script src="js/config.js"></script>
+  <script src="js/slideshow-images.js"></script>
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/site-chrome.js"></script>
 </body>
 </html>

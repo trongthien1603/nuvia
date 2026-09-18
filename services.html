@@ -17,10 +17,6 @@
         <div class="logo-mark">
           <img src="assets/logo.png" alt="" width="44" height="44">
         </div>
-        <div class="logo-text">
-          <span class="logo-name">Nuvia Immigration</span>
-          <span class="logo-tagline" data-i18n="footer.tagline">Regulated Canadian Immigration Consultants</span>
-        </div>
       </a>
       <div class="header-actions">
         <nav class="nav-desktop">
@@ -28,11 +24,12 @@
           <a href="services.html" class="active" data-i18n="nav.services">Services</a>
           <a href="fees.html" data-i18n="nav.fees">Fees</a>
           <a href="about.html" data-i18n="nav.about">About</a>
+          <a href="resources.html" data-i18n="nav.resources">Resources</a>
           <a href="contact.html" data-i18n="nav.contact">Contact</a>
-          <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book Consultation</a>
+          <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book my free consultation</a>
         </nav>
         <div class="lang-switcher" role="group" aria-label="Language">
-          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true"><img src="assets/flags/ca.svg" alt="" class="lang-flag" width="22" height="15"> EN</button>
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true"><img src="assets/flags/en.svg" alt="" class="lang-flag" width="22" height="15"> EN</button>
           <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false"><img src="assets/flags/fr.svg" alt="" class="lang-flag" width="22" height="15"> FR</button>
           <button type="button" class="lang-btn" data-lang="vi" aria-pressed="false"><img src="assets/flags/vi.svg" alt="" class="lang-flag" width="22" height="15"> VI</button>
         </div>
@@ -46,6 +43,7 @@
       <a href="services.html" data-i18n="nav.services">Services</a>
       <a href="fees.html" data-i18n="nav.fees">Fees</a>
       <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
@@ -58,85 +56,390 @@
       </div>
     </section>
 
-    <section>
+    <section class="bg-light" id="services-overview">
       <div class="container">
-        <div class="card-grid">
-          <article class="card" id="express-entry">
+        <div class="section-header">
+          <span class="section-label" data-i18n="home.services.label">What We Offer</span>
+          <h2 data-i18n="home.services.title">Comprehensive Immigration Services</h2>
+          <p data-i18n="home.services.desc">From initial assessment to final approval, we guide you through every step.</p>
+        </div>
+        <div class="card-grid card-grid-3">
+          <a href="services.html#express-entry" class="card service-card" data-program="express-entry">
             <div class="card-icon">🍁</div>
-            <h3>Express Entry</h3>
-            <p>Canada's flagship economic immigration system for skilled workers. We help you:</p>
-            <ul style="margin: 1rem 0 0 1.25rem; color: var(--color-gray-600); font-size: 0.9375rem;">
-              <li>Create and optimize your Express Entry profile</li>
-              <li>Improve your Comprehensive Ranking System (CRS) score</li>
-              <li>Prepare for Invitation to Apply (ITA)</li>
-              <li>Submit complete permanent residence applications</li>
-            </ul>
-          </article>
-
-          <article class="card" id="pnp">
+            <h3 data-i18n="home.svc.express.title">Express Entry</h3>
+            <p data-i18n="home.svc.express.desc">Federal Skilled Worker, CEC, and FST programs.</p>
+          </a>
+          <a href="services.html#pnp" class="card service-card" data-program="pnp">
             <div class="card-icon">🏛️</div>
-            <h3>Provincial Nominee Programs (PNP)</h3>
-            <p>Provincial streams offer additional pathways to permanent residence:</p>
-            <ul style="margin: 1rem 0 0 1.25rem; color: var(--color-gray-600); font-size: 0.9375rem;">
-              <li>Ontario Immigrant Nominee Program (OINP)</li>
-              <li>BC Provincial Nominee Program (BC PNP)</li>
-              <li>Alberta Advantage Immigration Program (AAIP)</li>
-              <li>Other provincial and territorial programs</li>
-            </ul>
-          </article>
-
-          <article class="card" id="study-work">
+            <h3 data-i18n="home.svc.pnp.title">Provincial Nominee Programs</h3>
+            <p data-i18n="home.svc.pnp.desc">Strategic provincial nominations tailored to your profile.</p>
+          </a>
+          <a href="services.html#study-work" class="card service-card" data-program="study-work">
             <div class="card-icon">🎓</div>
-            <h3>Study & Work Permits</h3>
-            <p>Support for temporary residents pursuing education and employment in Canada:</p>
-            <ul style="margin: 1rem 0 0 1.25rem; color: var(--color-gray-600); font-size: 0.9375rem;">
-              <li>Study permit applications and extensions</li>
-              <li>Post-Graduation Work Permit (PGWP)</li>
-              <li>LMIA and LMIA-exempt work permits</li>
-              <li>Intra-company transfers and IEC</li>
-            </ul>
-          </article>
-
-          <article class="card" id="family">
+            <h3 data-i18n="home.svc.study.title">Study & Work Permits</h3>
+            <p data-i18n="home.svc.study.desc">Study permits, PGWP, and LMIA-based work permits.</p>
+          </a>
+          <a href="services.html#family" class="card service-card" data-program="family">
             <div class="card-icon">👨‍👩‍👧‍👦</div>
-            <h3>Family Sponsorship</h3>
-            <p>Reunite with loved ones through family class immigration:</p>
-            <ul style="margin: 1rem 0 0 1.25rem; color: var(--color-gray-600); font-size: 0.9375rem;">
-              <li>Spousal and common-law partner sponsorship</li>
-              <li>Dependent children sponsorship</li>
-              <li>Parent and grandparent sponsorship (PGP)</li>
-              <li>Super visa applications</li>
-            </ul>
-          </article>
-
-          <article class="card" id="business">
+            <h3 data-i18n="home.svc.family.title">Family Sponsorship</h3>
+            <p data-i18n="home.svc.family.desc">Spousal, parent, and grandparent sponsorship.</p>
+          </a>
+          <a href="services.html#business" class="card service-card" data-program="business">
             <div class="card-icon">💼</div>
-            <h3>Business Immigration</h3>
-            <p>Pathways for entrepreneurs and investors:</p>
-            <ul style="margin: 1rem 0 0 1.25rem; color: var(--color-gray-600); font-size: 0.9375rem;">
-              <li>Start-Up Visa Program</li>
-              <li>Self-Employed Persons Program</li>
-              <li>Provincial entrepreneur streams</li>
-              <li>Owner-operator LMIA pathways</li>
-            </ul>
-          </article>
-
-          <article class="card" id="appeals">
+            <h3 data-i18n="home.svc.business.title">Business Immigration</h3>
+            <p data-i18n="home.svc.business.desc">Start-up visa and provincial entrepreneur streams.</p>
+          </a>
+          <a href="services.html#appeals" class="card service-card" data-program="appeals">
             <div class="card-icon">⚖️</div>
-            <h3>Refusals, Appeals & Complex Cases</h3>
-            <p>Strategic support when applications don't go as planned:</p>
-            <ul style="margin: 1rem 0 0 1.25rem; color: var(--color-gray-600); font-size: 0.9375rem;">
-              <li>Application refusal analysis</li>
-              <li>Reconsideration and resubmission strategies</li>
-              <li>Judicial review referrals</li>
-              <li>Restoration of status applications</li>
-            </ul>
-          </article>
+            <h3 data-i18n="home.svc.appeals.title">Appeals & Refusals</h3>
+            <p data-i18n="home.svc.appeals.desc">Judicial review and refusal response strategies.</p>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="bg-light">
+    <div id="services-program-detail" hidden>
+      <nav class="program-quick-nav" aria-label="Program sections">
+        <div class="container program-quick-nav-inner">
+          <a href="#express-entry" data-program="express-entry" data-i18n="services.nav.express">Express Entry</a>
+          <a href="#pnp" data-program="pnp" data-i18n="services.nav.pnp">PNP</a>
+          <a href="#study-work" data-program="study-work" data-i18n="services.nav.study">Study & Work</a>
+          <a href="#family" data-program="family" data-i18n="services.nav.family">Family</a>
+          <a href="#business" data-program="business" data-i18n="services.nav.business">Business</a>
+          <a href="#appeals" data-program="appeals" data-i18n="services.nav.appeals">Appeals</a>
+        </div>
+      </nav>
+
+      <div class="container program-detail-toolbar">
+        <button type="button" class="program-back-btn" data-i18n="services.back">← All services</button>
+      </div>
+
+    <section class="program-section" id="express-entry">
+      <div class="container">
+        <div class="program-header">
+          <h2 data-i18n="services.express.title">Express Entry</h2>
+          <p data-i18n="services.express.desc">Canada's flagship economic immigration system for skilled workers and professionals.</p>
+        </div>
+        <div class="program-detail-card">
+          <ul class="program-features">
+            <li data-i18n="services.express.f1">Create and optimize your Express Entry profile</li>
+            <li data-i18n="services.express.f2">Improve your Comprehensive Ranking System (CRS) score</li>
+            <li data-i18n="services.express.f3">Prepare for Invitation to Apply (ITA)</li>
+            <li data-i18n="services.express.f4">Submit complete permanent residence applications</li>
+          </ul>
+        </div>
+        <h3 class="program-faq-title" data-i18n="services.faq.heading">Common Questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.express.faq.q1">What is Express Entry and how does it work?</button>
+            <div class="faq-answer" data-i18n="services.express.faq.a1">Express Entry is Canada's online system for managing permanent residence applications under Federal Skilled Worker, Canadian Experience Class, and Federal Skilled Trades programs.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.express.faq.q2">What CRS score do I need to receive an ITA?</button>
+            <div class="faq-answer" data-i18n="services.express.faq.a2">There is no fixed score — cut-offs change with each draw. We assess your profile and recommend realistic steps to improve your ranking.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.express.faq.q3">Can you help if I already have an Express Entry profile?</button>
+            <div class="faq-answer" data-i18n="services.express.faq.a3">Yes. We review existing profiles for errors, missed points, and strategy improvements.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.express.faq.q4">What is CRS and what affects my score?</button>
+            <div class="faq-answer" data-i18n="services.express.faq.a4">CRS scores candidates on age, education, language, work experience, and adaptability factors.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.express.faq.q5">What is an ITA and how long do I have to apply?</button>
+            <div class="faq-answer" data-i18n="services.express.faq.a5">You typically have 60 days to submit a complete permanent residence application once you receive an ITA.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.express.faq.q6">Can I include my spouse and children in Express Entry?</button>
+            <div class="faq-answer" data-i18n="services.express.faq.a6">Yes. You can include your spouse or common-law partner and dependent children in your application.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.express.faq.q7">Do I need a job offer for Express Entry?</button>
+            <div class="faq-answer" data-i18n="services.express.faq.a7">A job offer is not always required, though a valid offer can add CRS points.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.express.faq.q8">Which Express Entry program is right for me — FSW, CEC, or FST?</button>
+            <div class="faq-answer" data-i18n="services.express.faq.a8">We assess whether Federal Skilled Worker, Canadian Experience Class, or Federal Skilled Trades fits your profile.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section bg-light" id="pnp">
+      <div class="container">
+        <div class="program-header">
+          <h2 data-i18n="services.pnp.title">Provincial Nominee Programs (PNP)</h2>
+          <p data-i18n="services.pnp.desc">Provincial streams offer additional pathways to permanent residence across Canada.</p>
+        </div>
+        <div class="program-detail-card">
+          <ul class="program-features">
+            <li data-i18n="services.pnp.f1">Ontario Immigrant Nominee Program (OINP)</li>
+            <li data-i18n="services.pnp.f2">BC Provincial Nominee Program (BC PNP)</li>
+            <li data-i18n="services.pnp.f3">Quebec and other provincial programs</li>
+            <li data-i18n="services.pnp.f4">Express Entry-linked and base nominations</li>
+          </ul>
+        </div>
+        <h3 class="program-faq-title" data-i18n="services.faq.heading">Common Questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.pnp.faq.q1">What is a Provincial Nominee Program?</button>
+            <div class="faq-answer" data-i18n="services.pnp.faq.a1">PNPs allow provinces and territories to nominate individuals who meet local labour market needs.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.pnp.faq.q2">How do I know which province to apply to?</button>
+            <div class="faq-answer" data-i18n="services.pnp.faq.a2">The right province depends on your occupation, experience, language ability, and ties to the region.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.pnp.faq.q3">Can I apply to PNP and Express Entry at the same time?</button>
+            <div class="faq-answer" data-i18n="services.pnp.faq.a3">In many cases, yes — we coordinate both pathways so your strategy stays aligned.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.pnp.faq.q4">What is the difference between base and enhanced PNP streams?</button>
+            <div class="faq-answer" data-i18n="services.pnp.faq.a4">Enhanced nominations add 600 CRS points; base streams are applied to directly.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.pnp.faq.q5">Does a provincial nomination guarantee permanent residence?</button>
+            <div class="faq-answer" data-i18n="services.pnp.faq.a5">A nomination is a major step but you must still meet federal admissibility requirements.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.pnp.faq.q6">Do I need a job offer for PNP?</button>
+            <div class="faq-answer" data-i18n="services.pnp.faq.a6">Some streams require a job offer; others target in-demand skills or graduates.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.pnp.faq.q7">How long does PNP processing take?</button>
+            <div class="faq-answer" data-i18n="services.pnp.faq.a7">Processing times vary by province and stream. We provide realistic timelines for your case.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.pnp.faq.q8">Can I move to another province after receiving a nomination?</button>
+            <div class="faq-answer" data-i18n="services.pnp.faq.a8">Most PNPs expect you to live and work in the nominating province.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section" id="study-work">
+      <div class="container">
+        <div class="program-header">
+          <h2 data-i18n="services.study.title">Study & Work Permits</h2>
+          <p data-i18n="services.study.desc">Support for temporary residents pursuing education and employment in Canada.</p>
+        </div>
+        <div class="program-detail-card">
+          <ul class="program-features">
+            <li data-i18n="services.study.f1">Study permit applications and extensions</li>
+            <li data-i18n="services.study.f2">Post-Graduation Work Permit (PGWP)</li>
+            <li data-i18n="services.study.f3">LMIA and LMIA-exempt work permits</li>
+            <li data-i18n="services.study.f4">Intra-company transfers and IEC</li>
+          </ul>
+        </div>
+        <h3 class="program-faq-title" data-i18n="services.faq.heading">Common Questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.study.faq.q1">Can I work while studying in Canada?</button>
+            <div class="faq-answer" data-i18n="services.study.faq.a1">Most full-time international students with a valid study permit can work on or off campus under certain conditions.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.study.faq.q2">What is a PGWP and how do I qualify?</button>
+            <div class="faq-answer" data-i18n="services.study.faq.a2">The Post-Graduation Work Permit lets eligible graduates work in Canada after completing a program at a designated learning institution.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.study.faq.q3">Can studying in Canada lead to permanent residence?</button>
+            <div class="faq-answer" data-i18n="services.study.faq.a3">Yes — many clients use study → PGWP → Canadian work experience → Express Entry or PNP.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.study.faq.q4">How long does a study permit take to process?</button>
+            <div class="faq-answer" data-i18n="services.study.faq.a4">Processing times depend on your country, IRCC volume, and application completeness.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.study.faq.q5">What is an LMIA and when is it required?</button>
+            <div class="faq-answer" data-i18n="services.study.faq.a5">An LMIA shows an employer tried to hire Canadians first. Some work permits require it; others are exempt.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.study.faq.q6">Can my spouse work while I study?</button>
+            <div class="faq-answer" data-i18n="services.study.faq.a6">Spouses of full-time students may qualify for an open work permit in many cases.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.study.faq.q7">What happens if my study permit expires?</button>
+            <div class="faq-answer" data-i18n="services.study.faq.a7">Apply to extend before expiry if you wish to continue studying. We help with extensions and restoration.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.study.faq.q8">What is the difference between open and employer-specific work permits?</button>
+            <div class="faq-answer" data-i18n="services.study.faq.a8">Open permits let you work for most employers; closed permits tie you to one employer and location.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section bg-light" id="family">
+      <div class="container">
+        <div class="program-header">
+          <h2 data-i18n="services.family.title">Family Sponsorship</h2>
+          <p data-i18n="services.family.desc">Reunite with loved ones through Canada's family class immigration programs.</p>
+        </div>
+        <div class="program-detail-card">
+          <ul class="program-features">
+            <li data-i18n="services.family.f1">Spousal and common-law partner sponsorship</li>
+            <li data-i18n="services.family.f2">Dependent children sponsorship</li>
+            <li data-i18n="services.family.f3">Parent and grandparent sponsorship (PGP)</li>
+            <li data-i18n="services.family.f4">Super Visa applications</li>
+          </ul>
+        </div>
+        <h3 class="program-faq-title" data-i18n="services.faq.heading">Common Questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.family.faq.q1">Who can I sponsor to come to Canada?</button>
+            <div class="faq-answer" data-i18n="services.family.faq.a1">Eligible sponsors can typically sponsor a spouse, common-law partner, dependent children, and in some cases parents or grandparents.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.family.faq.q2">How long does spousal sponsorship take?</button>
+            <div class="faq-answer" data-i18n="services.family.faq.a2">Processing times vary by stream and IRCC workload. We prepare complete applications to avoid delays.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.family.faq.q3">What is a Super Visa?</button>
+            <div class="faq-answer" data-i18n="services.family.faq.a3">The Super Visa allows parents and grandparents of Canadian citizens or permanent residents to visit for extended periods.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.family.faq.q4">What are the income requirements for sponsorship?</button>
+            <div class="faq-answer" data-i18n="services.family.faq.a4">Sponsors must meet minimum income for certain programs like parent/grandparent sponsorship.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.family.faq.q5">What is inland vs overseas spousal sponsorship?</button>
+            <div class="faq-answer" data-i18n="services.family.faq.a5">Inland applies when the sponsored person is in Canada; overseas is processed through a visa office abroad.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.family.faq.q6">What documents prove a genuine relationship?</button>
+            <div class="faq-answer" data-i18n="services.family.faq.a6">IRCC looks at cohabitation, communication, photos, joint finances, and supporting statements.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.family.faq.q7">Can I sponsor if I receive social assistance?</button>
+            <div class="faq-answer" data-i18n="services.family.faq.a7">Generally, sponsors receiving social assistance cannot sponsor, with some exceptions.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.family.faq.q8">Can I sponsor my fiancé or partner?</button>
+            <div class="faq-answer" data-i18n="services.family.faq.a8">Canada recognizes spousal and common-law sponsorship. Fiancés must marry or meet common-law criteria first.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section" id="business">
+      <div class="container">
+        <div class="program-header">
+          <h2 data-i18n="services.business.title">Business Immigration</h2>
+          <p data-i18n="services.business.desc">Pathways for entrepreneurs, investors, and business owners seeking to establish in Canada.</p>
+        </div>
+        <div class="program-detail-card">
+          <ul class="program-features">
+            <li data-i18n="services.business.f1">Start-Up Visa Program</li>
+            <li data-i18n="services.business.f2">Self-Employed Persons Program</li>
+            <li data-i18n="services.business.f3">Provincial entrepreneur streams</li>
+            <li data-i18n="services.business.f4">Owner-operator LMIA pathways</li>
+          </ul>
+        </div>
+        <h3 class="program-faq-title" data-i18n="services.faq.heading">Common Questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.business.faq.q1">What business immigration options exist in Canada?</button>
+            <div class="faq-answer" data-i18n="services.business.faq.a1">Options include the Start-Up Visa, provincial entrepreneur programs, self-employed pathways, and owner-operator work permit routes.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.business.faq.q2">Do I need a minimum investment amount?</button>
+            <div class="faq-answer" data-i18n="services.business.faq.a2">Requirements vary by program and province. We assess which stream fits your situation.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.business.faq.q3">Can I buy an existing business to immigrate?</button>
+            <div class="faq-answer" data-i18n="services.business.faq.a3">In some cases, acquiring a business may support an owner-operator LMIA or provincial entrepreneur application.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.business.faq.q4">Who qualifies for the Start-Up Visa?</button>
+            <div class="faq-answer" data-i18n="services.business.faq.a4">Candidates need a qualifying business idea and support from a designated organization.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.business.faq.q5">What is the Self-Employed Persons Program?</button>
+            <div class="faq-answer" data-i18n="services.business.faq.a5">This program targets self-employment experience in cultural activities, athletics, or farm management.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.business.faq.q6">Can I start with a work permit before applying for PR?</button>
+            <div class="faq-answer" data-i18n="services.business.faq.a6">Yes — many clients enter on a work permit and later transition to permanent residence.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.business.faq.q7">What net worth is required for entrepreneur programs?</button>
+            <div class="faq-answer" data-i18n="services.business.faq.a7">Thresholds vary widely by province. We identify programs aligned with your assets.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.business.faq.q8">Does buying a franchise qualify for business immigration?</button>
+            <div class="faq-answer" data-i18n="services.business.faq.a8">Franchise ownership may support certain pathways if you have an active management role.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section bg-light" id="appeals">
+      <div class="container">
+        <div class="program-header">
+          <h2 data-i18n="services.appeals.title">Refusals, Appeals & Complex Cases</h2>
+          <p data-i18n="services.appeals.desc">Strategic support when applications do not go as planned.</p>
+        </div>
+        <div class="program-detail-card">
+          <ul class="program-features">
+            <li data-i18n="services.appeals.f1">Application refusal analysis</li>
+            <li data-i18n="services.appeals.f2">Reconsideration and resubmission strategies</li>
+            <li data-i18n="services.appeals.f3">Judicial review referrals</li>
+            <li data-i18n="services.appeals.f4">Restoration of status applications</li>
+          </ul>
+        </div>
+        <h3 class="program-faq-title" data-i18n="services.faq.heading">Common Questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.appeals.faq.q1">What can I do if my application is refused?</button>
+            <div class="faq-answer" data-i18n="services.appeals.faq.a1">Options may include addressing the refusal grounds and reapplying, requesting reconsideration, or pursuing judicial review.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.appeals.faq.q2">Should I reapply on my own after a refusal?</button>
+            <div class="faq-answer" data-i18n="services.appeals.faq.a2">A second application without fixing the underlying issues often leads to another refusal.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.appeals.faq.q3">Can you help if I am out of status in Canada?</button>
+            <div class="faq-answer" data-i18n="services.appeals.faq.a3">Depending on your circumstances, restoration of status may be available within strict deadlines.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.appeals.faq.q4">What is judicial review?</button>
+            <div class="faq-answer" data-i18n="services.appeals.faq.a4">A federal court examines whether an immigration decision was reasonable and procedurally fair.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.appeals.faq.q5">How long do I have to respond to a refusal?</button>
+            <div class="faq-answer" data-i18n="services.appeals.faq.a5">Deadlines depend on the remedy. Contact us as soon as you receive a refusal letter.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.appeals.faq.q6">What is restoration of status?</button>
+            <div class="faq-answer" data-i18n="services.appeals.faq.a6">You may apply to restore temporary status within 90 days of expiry while remaining in Canada.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.appeals.faq.q7">Can you request GCMS or ATIP notes?</button>
+            <div class="faq-answer" data-i18n="services.appeals.faq.a7">Yes. These notes reveal what officers recorded — invaluable for understanding a refusal.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.appeals.faq.q8">Is it worth appealing or reapplying after a visa refusal?</button>
+            <div class="faq-answer" data-i18n="services.appeals.faq.a8">It depends on refusal reasons and new evidence. We advise on the strongest path forward.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section class="bg-light services-program-cta">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="services.cta.title">Not Sure Which Program Fits You?</h2>
+            <p data-i18n="services.cta.desc">Our initial consultation includes a comprehensive eligibility assessment.</p>
+          </div>
+          <div style="text-align: center;">
+            <a href="contact.html#book" class="btn btn-primary" data-i18n="services.cta.btn">Book Your Assessment</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="bg-light" id="services-overview-cta">
       <div class="container">
         <div class="section-header">
           <h2 data-i18n="services.cta.title">Not Sure Which Program Fits You?</h2>
@@ -167,10 +470,10 @@
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.services">Services</h4>
-          <a href="services.html">Express Entry</a>
-          <a href="services.html">PNP</a>
-          <a href="services.html" data-i18n="home.svc.study.title">Study & Work Permits</a>
-          <a href="services.html" data-i18n="home.svc.family.title">Family Sponsorship</a>
+          <a href="services.html#express-entry">Express Entry</a>
+          <a href="services.html#pnp">PNP</a>
+          <a href="services.html#study-work" data-i18n="home.svc.study.title">Study & Work Permits</a>
+          <a href="services.html#family" data-i18n="home.svc.family.title">Family Sponsorship</a>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.company">Company</h4>
@@ -183,8 +486,16 @@
           <h4 data-i18n="footer.contact">Contact</h4>
           <a href="mailto:nuvia.immigration@gmail.com" data-config="email">nuvia.immigration@gmail.com</a>
           <a href="tel:+15148958603" data-config="phone">+1 (514) 895-8603</a>
-          <a href="https://wa.me/15148958603" data-config="whatsapp" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp">WhatsApp</a>
-          <a href="https://zalo.me/15148958603" data-config="zalo" target="_blank" rel="noopener noreferrer" data-i18n="contact.zalo">Zalo</a>
+          <div class="footer-social">
+            <a href="https://wa.me/15148958603" class="social-link-card whatsapp" data-config="whatsapp" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/whatsapp.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.whatsapp">WhatsApp</span>
+            </a>
+            <a href="https://zalo.me/15148958603" class="social-link-card zalo" data-config="zalo" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/zalo.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.zalo">Zalo</span>
+            </a>
+          </div>
           <span class="footer-text" data-config="location">Montreal, Quebec, Canada</span>
         </div>
       </div>
@@ -201,7 +512,9 @@
 
   <script src="js/config.js"></script>
   <script src="js/translations.js"></script>
+  <script src="js/services-faq-translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/site-chrome.js"></script>
 </body>
 </html>
