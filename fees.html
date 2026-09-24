@@ -25,7 +25,6 @@
           <a href="fees.html" class="active" data-i18n="nav.fees">Fees</a>
           <a href="about.html" data-i18n="nav.about">About</a>
           <a href="resources.html" data-i18n="nav.resources">Resources</a>
-          <a href="contact.html" data-i18n="nav.contact">Contact</a>
           <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book my free consultation</a>
         </nav>
         <div class="lang-switcher" role="group" aria-label="Language">
@@ -44,7 +43,6 @@
       <a href="fees.html" data-i18n="nav.fees">Fees</a>
       <a href="about.html" data-i18n="nav.about">About</a>
       <a href="resources.html" data-i18n="nav.resources">Resources</a>
-      <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
 
@@ -58,7 +56,13 @@
 
     <section>
       <div class="container">
-        <p style="text-align:center;color:var(--color-gray-600);max-width:640px;margin:0 auto 1.5rem;" data-i18n="fees.tiers.desc">Not everyone needs the same level of support. Hover a tier to highlight matching fees in the tables below.</p>
+        <div class="fees-section fees-consult-section">
+          <h2 data-i18n="fees.consult.title">Consultations</h2>
+          <p data-i18n="fees.consult.desc">Initial consultations help us assess your eligibility and recommend the best pathway. Consultation fees apply to all programs and are separate from the application service tiers below.</p>
+          <div class="fees-consult-grid" data-fees-catalog="consult" data-catalog="consult"></div>
+        </div>
+
+        <p style="text-align:center;color:var(--color-gray-600);max-width:640px;margin:0 auto 1.5rem;" data-i18n="fees.tiers.desc">Not everyone needs the same level of support. Hover a tier to highlight matching fees below, then expand a service for details.</p>
         <div class="pricing-tiers">
           <div class="pricing-tier" data-tier="review" tabindex="0">
             <span class="tier-badge" data-i18n="fees.tier.option1">Option 1</span>
@@ -101,18 +105,6 @@
           <a href="contact.html#book" class="btn btn-primary" data-i18n="nav.book">Book my free consultation</a>
         </div>
 
-        <h2 style="text-align:center;margin-bottom:1rem;" data-i18n="fees.twoCosts.title">The Two Costs in Every Application</h2>
-        <div class="fees-intro-grid">
-          <div class="fees-intro-card">
-            <h3 data-i18n="fees.prof.title">Professional Fees</h3>
-            <p data-i18n="fees.prof.desc">What you pay Nuvia for expertise, preparation, and representation. Quoted in writing before work begins.</p>
-          </div>
-          <div class="fees-intro-card">
-            <h3 data-i18n="fees.gov.title">Government Fees</h3>
-            <p data-i18n="fees.gov.desc">Paid directly to IRCC or provincial authorities. Set by the government, subject to change. We never add markup.</p>
-          </div>
-        </div>
-
         <div class="fees-page-tabs">
           <button type="button" class="fees-tab active" data-fees-tab="temp" data-i18n="fees.tab.temp">Temporary Residence</button>
           <button type="button" class="fees-tab" data-fees-tab="pr" data-i18n="fees.tab.pr">Permanent Residence</button>
@@ -122,133 +114,9 @@
 
         <div class="fees-tab-panel active" data-fees-panel="temp">
         <div class="fees-section">
-          <h2 data-i18n="fees.consult.title">Consultations</h2>
-          <p data-i18n="fees.consult.desc">Initial consultations help us assess your eligibility and recommend the best pathway.</p>
-          <div class="fees-table-wrap">
-            <table class="fees-table">
-              <thead>
-                <tr>
-                  <th data-i18n="fees.col.service">Service</th>
-                  <th data-i18n="fees.col.legal">Professional Fee (CAD)</th>
-                  <th data-i18n="fees.col.gov">Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="fees.consult.15">15-minute consultation</td>
-                  <td data-i18n="fees.consult.15.fee">Free</td>
-                  <td data-i18n="fees.consult.15.note">Eligibility overview</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.consult.30">30-minute consultation</td>
-                  <td>$150 – $200</td>
-                  <td data-i18n="fees.consult.credit">Credited toward file if retained</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.consult.60">60-minute consultation</td>
-                  <td>$250 – $350</td>
-                  <td data-i18n="fees.consult.credit">Credited toward file if retained</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="fees-section">
           <h2 data-i18n="fees.temp.title">Temporary Residence</h2>
           <p data-i18n="fees.temp.desc">Visitor, study, and work permit applications.</p>
-          <div class="fees-table-wrap">
-            <table class="fees-table fees-table-tiered">
-              <thead>
-                <tr>
-                  <th data-i18n="fees.col.service">Service</th>
-                  <th class="tier-col tier-review" data-i18n="fees.col.review">Document Review</th>
-                  <th class="tier-col tier-guided" data-i18n="fees.col.guided">Guided Support</th>
-                  <th class="tier-col tier-full" data-i18n="fees.col.full">Full Representation</th>
-                  <th data-i18n="fees.col.gov">Government Fees (approx.)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="fees.temp.visitor">Visitor / Tourist Visa</td>
-                  <td class="tier-col tier-review">$250 – $450</td>
-                  <td class="tier-col tier-guided">$400 – $700</td>
-                  <td class="tier-col tier-full">$800 – $1,500</td>
-                  <td data-i18n="fees.temp.visitor.gov">$100/person + biometrics $85</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.business">Business Visitor / Short-Term Work Permit Exemption</td>
-                  <td class="tier-col tier-review">$400 – $700</td>
-                  <td class="tier-col tier-guided">$650 – $1,100</td>
-                  <td class="tier-col tier-full">$1,200 – $2,000</td>
-                  <td data-i18n="fees.temp.business.gov">TRV $100 or eTA $7 + biometrics if required</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.study">Study Permit</td>
-                  <td class="tier-col tier-review">$350 – $550</td>
-                  <td class="tier-col tier-guided">$750 – $1,000</td>
-                  <td class="tier-col tier-full">$1,500 – $2,000</td>
-                  <td data-i18n="fees.temp.study.gov">$150 + biometrics $85</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.lmia">LMIA Application</td>
-                  <td class="tier-col tier-review">$1,200 – $1,800</td>
-                  <td class="tier-col tier-guided">$2,000 – $3,000</td>
-                  <td class="tier-col tier-full">$3,500 – $5,000</td>
-                  <td data-i18n="fees.temp.lmia.gov">LMIA $1,000/position (ESDC)</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.work">LMIA-based Work Permit</td>
-                  <td class="tier-col tier-review">$350 – $550</td>
-                  <td class="tier-col tier-guided">$750 – $1,000</td>
-                  <td class="tier-col tier-full">$1,500 – $2,000</td>
-                  <td data-i18n="fees.temp.work.gov">WP $155 + biometrics $85</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.gts">Global Talent Stream LMIA + Work Permit</td>
-                  <td class="tier-col tier-review">$1,400 – $1,800</td>
-                  <td class="tier-col tier-guided">$2,400 – $3,200</td>
-                  <td class="tier-col tier-full">$4,000 – $5,000</td>
-                  <td data-i18n="fees.temp.gts.gov">LMIA $1,000 + WP $155 + biometrics</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.cusma">CUSMA Professionals Work Permit</td>
-                  <td class="tier-col tier-review">$700 – $1,200</td>
-                  <td class="tier-col tier-guided">$1,100 – $2,000</td>
-                  <td class="tier-col tier-full">$2,000 – $3,500</td>
-                  <td data-i18n="fees.temp.cusma.gov">Employer compliance $230 + WP $155</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.fta">Other Free Trade Agreement Work Permits</td>
-                  <td class="tier-col tier-review">$700 – $1,750</td>
-                  <td class="tier-col tier-guided">$1,100 – $2,800</td>
-                  <td class="tier-col tier-full">$2,000 – $5,000</td>
-                  <td data-i18n="fees.temp.fta.gov">Employer compliance $230 + WP $155</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.pgwp">Post-Graduation Work Permit</td>
-                  <td class="tier-col tier-review">$175 – $275</td>
-                  <td class="tier-col tier-guided">$300 – $450</td>
-                  <td class="tier-col tier-full">$500 – $750</td>
-                  <td data-i18n="fees.temp.pgwp.gov">$255 + biometrics if required</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.bowp">Bridging Open Work Permit</td>
-                  <td class="tier-col tier-review">$175 – $275</td>
-                  <td class="tier-col tier-guided">$300 – $450</td>
-                  <td class="tier-col tier-full">$500 – $750</td>
-                  <td data-i18n="fees.temp.bowp.gov">$255 + biometrics if required</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.temp.super">Super Visa (1 parent / 2 parents)</td>
-                  <td class="tier-col tier-review">$450 – $750</td>
-                  <td class="tier-col tier-guided">$750 – $1,100</td>
-                  <td class="tier-col tier-full">$1,500 – $2,200</td>
-                  <td data-i18n="fees.temp.super.gov">TRV $100/person + biometrics $85</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div class="pricing-service-list" data-fees-catalog="temp" data-catalog="temp"></div>
         </div>
         </div>
 
@@ -256,222 +124,18 @@
         <div class="fees-section">
           <h2 data-i18n="fees.pr.title">Permanent Residence</h2>
           <p data-i18n="fees.pr.desc">Economic and family class permanent residence applications.</p>
-          <div class="fees-table-wrap">
-            <table class="fees-table fees-table-tiered">
-              <thead>
-                <tr>
-                  <th data-i18n="fees.col.service">Service</th>
-                  <th class="tier-col tier-review" data-i18n="fees.col.review">Document Review</th>
-                  <th class="tier-col tier-guided" data-i18n="fees.col.guided">Guided Support</th>
-                  <th class="tier-col tier-full" data-i18n="fees.col.full">Full Representation</th>
-                  <th data-i18n="fees.col.gov">Government Fees (approx.)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="fees.pr.express">Express Entry (profile + PR after ITA)</td>
-                  <td class="tier-col tier-review">$500 – $900</td>
-                  <td class="tier-col tier-guided">$1,500 – $2,500</td>
-                  <td class="tier-col tier-full">$3,000 – $4,500</td>
-                  <td data-i18n="fees.pr.express.gov">Principal $1,525; spouse $1,525; child $260</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.pnp">Provincial Nominee Program (non-investor)</td>
-                  <td class="tier-col tier-review">$600 – $1,000</td>
-                  <td class="tier-col tier-guided">$2,000 – $3,500</td>
-                  <td class="tier-col tier-full">$4,500 – $6,500</td>
-                  <td data-i18n="fees.pr.pnp.gov">Provincial + federal PR fees vary</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.spousal">Spousal Sponsorship (outside Canada)</td>
-                  <td class="tier-col tier-review">$500 – $900</td>
-                  <td class="tier-col tier-guided">$1,800 – $2,800</td>
-                  <td class="tier-col tier-full">$3,500 – $4,500</td>
-                  <td data-i18n="fees.pr.spousal.gov">$1,205 + biometrics $85</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.spousal.in">Spousal Sponsorship (inside Canada + OWP)</td>
-                  <td class="tier-col tier-review">$600 – $1,000</td>
-                  <td class="tier-col tier-guided">$2,000 – $3,200</td>
-                  <td class="tier-col tier-full">$4,000 – $5,000</td>
-                  <td data-i18n="fees.pr.spousal.in.gov">$1,205 PR + $255 OWP + biometrics</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.parent">Parent / Grandparent Sponsorship (1 / 2 parents)</td>
-                  <td class="tier-col tier-review">$450 – $750</td>
-                  <td class="tier-col tier-guided">$1,200 – $1,800</td>
-                  <td class="tier-col tier-full">$2,500 – $3,500</td>
-                  <td data-i18n="fees.pr.parent.gov">$1,205/sponsored person + biometrics</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.child">Child / Other Relative Sponsorship</td>
-                  <td class="tier-col tier-review">$450 – $900</td>
-                  <td class="tier-col tier-guided">$1,200 – $2,400</td>
-                  <td class="tier-col tier-full">$2,500 – $4,500</td>
-                  <td data-i18n="fees.pr.child.gov">$170–$1,205 depending on relationship</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.appeal">Sponsorship Appeals (IAD)</td>
-                  <td class="tier-col tier-review">$1,500 – $2,250</td>
-                  <td class="tier-col tier-guided">$2,500 – $4,000</td>
-                  <td class="tier-col tier-full">$5,000 – $7,500</td>
-                  <td data-i18n="fees.pr.appeal.gov">N/A</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.self">Self-Employed (federal)</td>
-                  <td class="tier-col tier-review">$900 – $1,400</td>
-                  <td class="tier-col tier-guided">$2,500 – $3,500</td>
-                  <td class="tier-col tier-full">$5,000 – $6,500</td>
-                  <td data-i18n="fees.pr.self.gov">$2,385 + biometrics $85</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.startup">Start-Up Visa</td>
-                  <td class="tier-col tier-review">$1,500 – $3,000</td>
-                  <td class="tier-col tier-guided">$4,000 – $7,500</td>
-                  <td class="tier-col tier-full">$8,000 – $15,000</td>
-                  <td data-i18n="fees.pr.startup.gov">Principal $2,385; dependants vary</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.investor">Entrepreneur / Investor Programs</td>
-                  <td class="tier-col tier-review">$3,000 – $6,000</td>
-                  <td class="tier-col tier-guided">$7,500 – $15,000</td>
-                  <td class="tier-col tier-full">$15,000 – $30,000</td>
-                  <td data-i18n="fees.pr.investor.gov">Varies by program and province</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.caregiver">Caregiver Programs</td>
-                  <td class="tier-col tier-review">$900 – $1,400</td>
-                  <td class="tier-col tier-guided">$2,200 – $3,500</td>
-                  <td class="tier-col tier-full">$4,500 – $6,000</td>
-                  <td data-i18n="fees.pr.caregiver.gov">$1,525/adult; $260/child + biometrics</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.pr.hc">Refugee / Humanitarian & Compassionate / PRRA</td>
-                  <td class="tier-col tier-review">$900 – $1,600</td>
-                  <td class="tier-col tier-guided">$2,200 – $4,000</td>
-                  <td class="tier-col tier-full">$4,500 – $7,000</td>
-                  <td data-i18n="fees.pr.hc.gov">H&C: $1,210/adult; $175/child; PRRA: no fee</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div class="pricing-service-list" data-fees-catalog="pr" data-catalog="pr"></div>
         </div>
-
         <div class="fees-section">
           <h2 data-i18n="fees.dependents.title">Dependants Added to Applications</h2>
-          <div class="fees-table-wrap">
-            <table class="fees-table fees-table-tiered">
-              <thead>
-                <tr>
-                  <th data-i18n="fees.col.service">Service</th>
-                  <th class="tier-col tier-review" data-i18n="fees.col.review">Document Review</th>
-                  <th class="tier-col tier-guided" data-i18n="fees.col.guided">Guided Support</th>
-                  <th class="tier-col tier-full" data-i18n="fees.col.full">Full Representation</th>
-                  <th data-i18n="fees.col.gov">Government Fees (approx.)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="fees.dep.spouse">Spouse / Common-Law Partner</td>
-                  <td class="tier-col tier-review">$250 – $450</td>
-                  <td class="tier-col tier-guided">$450 – $700</td>
-                  <td class="tier-col tier-full">$800 – $1,200</td>
-                  <td data-i18n="fees.dep.spouse.gov">$1,525 (economic) or $1,210 (family class)</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.dep.child">Dependent Children</td>
-                  <td class="tier-col tier-review">$125 – $225</td>
-                  <td class="tier-col tier-guided">$225 – $350</td>
-                  <td class="tier-col tier-full">$400 – $600</td>
-                  <td data-i18n="fees.dep.child.gov">$260/child (economic) or $175/child (family class)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div class="pricing-service-list" data-fees-catalog="dependents" data-catalog="dependents"></div>
         </div>
         </div>
 
         <div class="fees-tab-panel" data-fees-panel="other">
         <div class="fees-section">
           <h2 data-i18n="fees.other.title">Other Services</h2>
-          <div class="fees-table-wrap">
-            <table class="fees-table fees-table-tiered">
-              <thead>
-                <tr>
-                  <th data-i18n="fees.col.service">Service</th>
-                  <th class="tier-col tier-review" data-i18n="fees.col.review">Document Review</th>
-                  <th class="tier-col tier-guided" data-i18n="fees.col.guided">Guided Support</th>
-                  <th class="tier-col tier-full" data-i18n="fees.col.full">Full Representation</th>
-                  <th data-i18n="fees.col.gov">Government Fees (approx.)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="fees.other.citizenship">Citizenship Application</td>
-                  <td class="tier-col tier-review">$450 – $900</td>
-                  <td class="tier-col tier-guided">$900 – $1,500</td>
-                  <td class="tier-col tier-full">$1,500 – $2,500</td>
-                  <td data-i18n="fees.other.citizenship.gov">Adult $649.75; minor $100</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.other.prcard">PR Card Renewal</td>
-                  <td class="tier-col tier-review">$250 – $450</td>
-                  <td class="tier-col tier-guided">$450 – $700</td>
-                  <td class="tier-col tier-full">$800 – $1,200</td>
-                  <td>$50</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.other.residence">Residence Questionnaire</td>
-                  <td class="tier-col tier-review">$400 – $900</td>
-                  <td class="tier-col tier-guided">$700 – $1,500</td>
-                  <td class="tier-col tier-full">$1,200 – $2,500</td>
-                  <td data-i18n="fees.other.refusal.gov">N/A</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.other.cert">Certificate of Canadian Citizenship (proof)</td>
-                  <td class="tier-col tier-review">$250 – $450</td>
-                  <td class="tier-col tier-guided">$450 – $700</td>
-                  <td class="tier-col tier-full">$800 – $1,200</td>
-                  <td>$75</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.other.trp">Temporary Resident Permit (TRP)</td>
-                  <td class="tier-col tier-review">$900 – $1,250</td>
-                  <td class="tier-col tier-guided">$1,500 – $2,100</td>
-                  <td class="tier-col tier-full">$2,500 – $3,500</td>
-                  <td>$239.75</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.other.rehab">Criminal Rehabilitation</td>
-                  <td class="tier-col tier-review">$1,000 – $1,750</td>
-                  <td class="tier-col tier-guided">$1,800 – $3,000</td>
-                  <td class="tier-col tier-full">$3,000 – $5,000</td>
-                  <td data-i18n="fees.other.rehab.gov">$239.75 (criminality) / $1,199 (serious)</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.other.arc">Authorization to Return to Canada (ARC)</td>
-                  <td class="tier-col tier-review">$500 – $1,050</td>
-                  <td class="tier-col tier-guided">$900 – $1,800</td>
-                  <td class="tier-col tier-full">$1,500 – $3,000</td>
-                  <td>$479.75</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.other.refusal">Refusal Analysis / Reconsideration</td>
-                  <td class="tier-col tier-review">$175 – $525</td>
-                  <td class="tier-col tier-guided">$300 – $900</td>
-                  <td class="tier-col tier-full">$500 – $1,500</td>
-                  <td data-i18n="fees.other.refusal.gov">Varies</td>
-                </tr>
-                <tr>
-                  <td data-i18n="fees.other.atip">ATIP / GCMS Notes Request</td>
-                  <td class="tier-col tier-review">$150 – $250</td>
-                  <td class="tier-col tier-guided">—</td>
-                  <td class="tier-col tier-full">—</td>
-                  <td>$5</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div class="pricing-service-list" data-fees-catalog="other" data-catalog="other"></div>
         </div>
         </div>
 
@@ -552,8 +216,8 @@
         <div class="footer-col">
           <h4 data-i18n="footer.company">Company</h4>
           <a href="about.html" data-i18n="footer.about">About Us</a>
-          <a href="resources.html" data-i18n="footer.resources">Resources</a>
           <a href="contact.html" data-i18n="footer.contact">Contact</a>
+          <a href="resources.html" data-i18n="footer.resources">Resources</a>
           <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
           <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
         </div>
@@ -588,6 +252,7 @@
   <script src="js/config.js"></script>
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
+  <script src="js/fees-catalog.js"></script>
   <script src="js/main.js"></script>
   <script src="js/site-chrome.js"></script>
 </body>

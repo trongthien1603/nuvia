@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Live IRCC processing times and application backlog tracker — updated from official Government of Canada data.">
+  <title>IRCC Processing Times | Nuvia Immigration Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body data-page-title="meta.processingTimesTitle">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">
+          <img src="assets/logo.png" alt="" width="44" height="44">
+        </div>
+      </a>
+      <div class="header-actions">
+        <nav class="nav-desktop">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="fees.html" data-i18n="nav.fees">Fees</a>
+          <a href="about.html" data-i18n="nav.about">About</a>
+          <a href="resources.html" class="active" data-i18n="nav.resources">Resources</a>
+          <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book my free consultation</a>
+        </nav>
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true"><img src="assets/flags/en.svg" alt="" class="lang-flag" width="22" height="15"> EN</button>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false"><img src="assets/flags/fr.svg" alt="" class="lang-flag" width="22" height="15"> FR</button>
+          <button type="button" class="lang-btn" data-lang="vi" aria-pressed="false"><img src="assets/flags/vi.svg" alt="" class="lang-flag" width="22" height="15"> VI</button>
+        </div>
+      </div>
+      <button class="nav-toggle" data-i18n-title="nav.toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="services.html" data-i18n="nav.services">Services</a>
+      <a href="fees.html" data-i18n="nav.fees">Fees</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="ptime-hero-badge" id="ircc-ptime-status" data-i18n="ptime.loading">Loading official IRCC processing times…</p>
+        <h1 data-i18n="ptime.hero.title">Latest IRCC Processing Times</h1>
+        <p data-i18n="ptime.hero.desc">Live weekly estimates from IRCC for work permits, study permits, visitor visas, and super visas across major source countries and in-Canada applicants.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="ptime-backlog-card ptime-backlog-dashboard">
+          <div class="ptime-backlog-header">
+            <h2 data-i18n="ptime.backlog.title">IRCC National Inventory &amp; Backlog Tracker</h2>
+            <span class="ptime-backlog-badge" data-i18n="ptime.backlog.live">Live system status</span>
+          </div>
+          <p class="ptime-dash-asof" id="ptime-backlog-asof-date">Loading live inventory data…</p>
+          <p class="ptime-dash-monthly" id="ptime-inventory-monthly-date" hidden></p>
+          <div class="ptime-dash-grid ptime-inventory-overview" id="ptime-inventory-overview">
+            <article class="ptime-dash-card">
+              <span class="ptime-dash-kicker" data-i18n="ptime.inventory.withinStandards">Within service standards</span>
+              <span class="ptime-dash-value" id="ptime-inventory-within">1,175,500</span>
+            </article>
+            <article class="ptime-dash-card">
+              <span class="ptime-dash-kicker" data-i18n="ptime.inventory.inBacklog">In backlog (exceeding standards)</span>
+              <span class="ptime-dash-value ptime-dash-value-warn" id="ptime-inventory-backlog">1,006,700</span>
+            </article>
+          </div>
+          <div class="ptime-dash-grid ptime-inventory-grid">
+            <article class="ptime-dash-card ptime-dash-card-accent">
+              <span class="ptime-dash-kicker" data-i18n="ptime.inventory.total">National Active Inventory</span>
+              <span class="ptime-dash-value" id="ptime-inventory-total">—</span>
+              <span class="ptime-dash-sub" data-i18n="ptime.inventory.pending">Pending inventory</span>
+              <span class="ptime-dash-finalized" id="ptime-inventory-total-finalized">Finalized YTD: —</span>
+            </article>
+            <article class="ptime-dash-card">
+              <span class="ptime-dash-kicker" data-i18n="ptime.inventory.tr">Temporary Residence</span>
+              <span class="ptime-dash-value" id="ptime-inventory-tr-pending">—</span>
+              <span class="ptime-dash-sub" data-i18n="ptime.inventory.pending">Pending inventory</span>
+              <span class="ptime-dash-finalized" id="ptime-inventory-tr-finalized">Finalized YTD: —</span>
+              <span class="ptime-dash-meta" id="ptime-inventory-tr-meta" hidden></span>
+            </article>
+            <article class="ptime-dash-card">
+              <span class="ptime-dash-kicker" data-i18n="ptime.inventory.pr">Permanent Residence</span>
+              <span class="ptime-dash-value" id="ptime-inventory-pr-pending">—</span>
+              <span class="ptime-dash-sub" data-i18n="ptime.inventory.pending">Pending inventory</span>
+              <span class="ptime-dash-finalized" id="ptime-inventory-pr-finalized">Finalized YTD: —</span>
+              <span class="ptime-dash-meta" id="ptime-inventory-pr-meta" hidden></span>
+            </article>
+            <article class="ptime-dash-card">
+              <span class="ptime-dash-kicker" data-i18n="ptime.inventory.citizenship">Citizenship</span>
+              <span class="ptime-dash-value" id="ptime-inventory-cit-pending">—</span>
+              <span class="ptime-dash-sub" data-i18n="ptime.inventory.pending">Pending inventory</span>
+              <span class="ptime-dash-finalized" id="ptime-inventory-cit-finalized">Finalized YTD: —</span>
+              <span class="ptime-dash-meta" id="ptime-inventory-cit-meta" hidden></span>
+            </article>
+          </div>
+          <div class="ptime-dash-breakdown" id="ptime-backlog-breakdown" hidden>
+            <h3 data-i18n="ptime.backlog.dash.breakdown">Temporary residence breakdown</h3>
+            <div class="ptime-dash-breakdown-grid" id="ptime-backlog-breakdown-grid"></div>
+          </div>
+          <div class="ptime-inventory-table-wrap" id="ptime-pr-backlog-table" hidden>
+            <h3 data-i18n="ptime.inventory.prBacklogTitle">Permanent Residence — Current Backlog Status</h3>
+            <div class="table-wrap">
+              <table class="ptime-inventory-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="ptime.inventory.table.program">Program</th>
+                    <th data-i18n="ptime.inventory.table.backlog">Current backlog %</th>
+                    <th data-i18n="ptime.inventory.table.vsMonth">vs last month</th>
+                    <th data-i18n="ptime.inventory.table.vsYear">vs last year</th>
+                  </tr>
+                </thead>
+                <tbody id="ptime-pr-backlog-body"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="ptime-inventory-highlights" id="ptime-inventory-highlights" hidden>
+            <h3 data-i18n="ptime.inventory.highlightsTitle">Key observations</h3>
+            <div class="ptime-highlights-grid" id="ptime-highlights-grid"></div>
+          </div>
+          <div class="ptime-inventory-trends" id="ptime-inventory-trends"></div>
+          <p class="ptime-dash-source"><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/reports-statistics/statistics-open-data/immigration-stats/application-inventory.html" target="_blank" rel="noopener noreferrer" data-i18n="ptime.officialLink">View on IRCC</a></p>
+        </div>
+
+        <section class="ptime-charts-section">
+          <h2 class="section-title" data-i18n="ptime.chart.title">Temporary Residence Processing Time Trends</h2>
+          <p class="ptime-chart-intro" data-i18n="ptime.chart.intro">Track how processing times shift across work, study, visitor, and super visa streams as IRCC publishes new weekly data.</p>
+          <div class="ptime-charts-grid">
+            <div class="ptime-chart-card">
+              <div id="ptime-trends-chart"></div>
+              <p class="ptime-chart-footnote" id="ptime-trends-note"></p>
+            </div>
+            <div class="ptime-chart-card" id="ptime-country-chart"></div>
+          </div>
+        </section>
+
+        <div class="ptime-grid" id="ircc-ptime-root"></div>
+
+      </div>
+    </section>
+
+    <section class="ptime-faq-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="ptime.faq.title">Frequently Asked Questions on IRCC Processing Times</h2>
+        <p class="ptime-faq-intro" data-i18n="ptime.faq.intro">Direct answers to common questions about how IRCC publishes processing times and what to do if your file is delayed.</p>
+        <div class="faq-list" id="ptime-faq-list">
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q1"></button><div class="faq-answer" data-i18n="ptime.faq.a1"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q2"></button><div class="faq-answer" data-i18n="ptime.faq.a2"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q3"></button><div class="faq-answer" data-i18n="ptime.faq.a3"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q4"></button><div class="faq-answer" data-i18n-html="ptime.faq.a4"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q5"></button><div class="faq-answer" data-i18n="ptime.faq.a5"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q6"></button><div class="faq-answer" data-i18n="ptime.faq.a6"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q7"></button><div class="faq-answer" data-i18n="ptime.faq.a7"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q8"></button><div class="faq-answer" data-i18n="ptime.faq.a8"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q9"></button><div class="faq-answer" data-i18n="ptime.faq.a9"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q10"></button><div class="faq-answer" data-i18n="ptime.faq.a10"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q11"></button><div class="faq-answer" data-i18n="ptime.faq.a11"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q12"></button><div class="faq-answer" data-i18n="ptime.faq.a12"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q13"></button><div class="faq-answer" data-i18n="ptime.faq.a13"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q14"></button><div class="faq-answer" data-i18n="ptime.faq.a14"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q15"></button><div class="faq-answer" data-i18n="ptime.faq.a15"></div></div>
+          <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false" data-i18n="ptime.faq.q16"></button><div class="faq-answer" data-i18n="ptime.faq.a16"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container">
+        <h2 data-i18n="ptime.cta.title">Unsure how processing times affect your plan?</h2>
+        <p data-i18n="ptime.cta.desc">Book a free consultation — we help you choose the right pathway and prepare a complete application.</p>
+        <a href="contact.html#book" class="btn btn-outline" data-i18n="nav.book">Book my free consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="rcic-disclosure" data-i18n-html="footer.disclosure"></div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-mark">
+              <img src="assets/logo.png" alt="" width="44" height="44">
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Nuvia Immigration</span>
+              <span class="logo-tagline" data-i18n="footer.tagline">Regulated Canadian Immigration Consultants</span>
+            </div>
+          </a>
+          <p data-i18n="footer.desc">Professional immigration consulting services.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.services">Services</h4>
+          <a href="services.html#express-entry">Express Entry</a>
+          <a href="services.html#pnp">PNP</a>
+          <a href="fees.html" data-i18n="nav.fees">Fees</a>
+          <a href="resources.html" data-i18n="footer.resources">Resources</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.company">Company</h4>
+          <a href="about.html" data-i18n="footer.about">About Us</a>
+          <a href="contact.html" data-i18n="footer.contact">Contact</a>
+          <a href="processing-times.html" data-i18n="ptime.nav">Processing Times</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <a href="mailto:nuvia.immigration@gmail.com" data-config="email">nuvia.immigration@gmail.com</a>
+          <a href="tel:+15148958603" data-config="phone">+1 (514) 895-8603</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 Nuvia Immigration Consulting. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="privacy.html" data-i18n="footer.privacy.link">Privacy</a>
+          <a href="terms.html" data-i18n="footer.terms.link">Terms</a>
+          <a href="https://www.college-ic.ca" target="_blank" rel="noopener noreferrer">CICC</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ircc-inventory-data.js"></script>
+  <script src="js/ircc-processing-times.js"></script>
+  <script src="js/site-chrome.js"></script>
+</body>
+</html>

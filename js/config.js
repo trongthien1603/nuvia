@@ -32,7 +32,10 @@ const SITE_CONFIG = {
 
   googleCalendarBookingUrl: "https://calendar.app.google/hchecrUGT8AgUvNs6",
 
-  googleScriptUrl: "https://script.google.com/macros/s/AKfycbxgpbOcDEE0qoqtv_jMKkxZhyrSHbRAOOuSRBAeJWvRerJThoZ3daKkEpekaOk7gBWV/exec",
+  // Google Apps Script web app URL (contact + booking forms → Google Sheets).
+  // After updating Code.gs: Deploy → Manage deployments → New version → Deploy.
+  // After changing this URL: re-publish/re-upload the live website so contact.html loads the new config.js.
+  googleScriptUrl: "https://script.google.com/macros/s/AKfycbx1dwlrfgVYhfI_W6YQUlQIB4wctcGW8XmLG4RRdPineJTkKCakjFexmFGuFkMSAIfM/exec",
 
 };
 

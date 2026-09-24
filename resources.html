@@ -26,7 +26,6 @@
           <a href="fees.html" data-i18n="nav.fees">Fees</a>
           <a href="about.html" data-i18n="nav.about">About</a>
           <a href="resources.html" class="active" data-i18n="nav.resources">Resources</a>
-          <a href="contact.html" data-i18n="nav.contact">Contact</a>
           <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book my free consultation</a>
         </nav>
         <div class="lang-switcher" role="group" aria-label="Language">
@@ -45,7 +44,6 @@
       <a href="fees.html" data-i18n="nav.fees">Fees</a>
       <a href="about.html" data-i18n="nav.about">About</a>
       <a href="resources.html" data-i18n="nav.resources">Resources</a>
-      <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
 
@@ -62,6 +60,14 @@
         <p style="text-align:center;color:var(--color-gray-600);max-width:640px;margin:0 auto 2.5rem;" data-i18n="resources.intro">These tools are provided by IRCC and provincial authorities. Results are estimates only — a licensed RCIC can assess your full profile.</p>
 
         <div class="tools-grid">
+          <article class="tool-card tool-card-featured">
+            <span class="tool-badge" aria-hidden="true">IRCC</span>
+            <h3 data-i18n="resources.irccHub.title">IRCC Processing Times &amp; Backlog</h3>
+            <p data-i18n="resources.irccHub.desc">Live weekly processing times for work, study, visitor, and super visas — plus how IRCC manages application inventory and wait times.</p>
+            <p class="tool-source" data-i18n="resources.source.ircc">Source: IRCC / Government of Canada</p>
+            <a href="processing-times.html" class="btn btn-primary" data-i18n="resources.processing.openLive">View Live Times</a>
+          </article>
+
           <article class="tool-card">
             <span class="tool-badge" aria-hidden="true">CRS</span>
             <h3 data-i18n="resources.crs.title">CRS Score Calculator</h3>
@@ -84,14 +90,6 @@
             <p data-i18n="resources.noc.desc">Find your National Occupational Classification code for Express Entry and work permits.</p>
             <p class="tool-source" data-i18n="resources.source.ircc">Source: IRCC / Government of Canada</p>
             <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/find-national-occupation-code.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
-          </article>
-
-          <article class="tool-card">
-            <span class="tool-badge" aria-hidden="true">TIME</span>
-            <h3 data-i18n="resources.processing.title">Processing Times</h3>
-            <p data-i18n="resources.processing.desc">Check current IRCC processing times for your application type.</p>
-            <p class="tool-source" data-i18n="resources.source.ircc">Source: IRCC / Government of Canada</p>
-            <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
           </article>
 
           <article class="tool-card">
@@ -119,14 +117,6 @@
           </article>
 
           <article class="tool-card">
-            <span class="tool-badge" aria-hidden="true">DATA</span>
-            <h3 data-i18n="resources.backlog.title">IRCC Application Processing & Backlog</h3>
-            <p data-i18n="resources.backlog.desc">Understand how IRCC manages applications, inventory, and wait times under annual targets.</p>
-            <p class="tool-source" data-i18n="resources.source.ircc">Source: IRCC / Government of Canada</p>
-            <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/reports-statistics/statistics-open-data/immigration-stats/application-processing-system.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
-          </article>
-
-          <article class="tool-card">
             <span class="tool-badge" aria-hidden="true">PNP</span>
             <h3 data-i18n="resources.pnp.title">Provincial Nominee Programs (PNP)</h3>
             <p data-i18n="resources.pnp.desc">Research PNP streams by province and compare pathways to permanent residence.</p>
@@ -134,6 +124,14 @@
             <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="pnp-resources-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="resources.pnpGrid.title">Provincial Nominee Programs by Province</h2>
+        <p class="pnp-section-intro" data-i18n="resources.pnpGrid.desc">Explore official PNP portals, draw results, and eligibility tools for every province and territory — plus Quebec's Arrima system.</p>
+        <div class="pnp-province-grid" id="pnp-programs-grid"></div>
       </div>
     </section>
 
@@ -173,6 +171,7 @@
           <h4 data-i18n="footer.company">Company</h4>
           <a href="about.html" data-i18n="footer.about">About Us</a>
           <a href="contact.html" data-i18n="footer.contact">Contact</a>
+          <a href="processing-times.html" data-i18n="ptime.nav">Processing Times</a>
           <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
           <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
         </div>
@@ -208,6 +207,7 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/pnp-resources.js"></script>
   <script src="js/site-chrome.js"></script>
 </body>
 </html>

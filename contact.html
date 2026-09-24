@@ -50,8 +50,6 @@
 
           <a href="resources.html" data-i18n="nav.resources">Resources</a>
 
-          <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
-
           <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book my free consultation</a>
 
         </nav>
@@ -87,8 +85,6 @@
       <a href="about.html" data-i18n="nav.about">About</a>
 
       <a href="resources.html" data-i18n="nav.resources">Resources</a>
-
-      <a href="contact.html" data-i18n="nav.contact">Contact</a>
 
     </nav>
 
@@ -220,17 +216,21 @@
 
             <p style="color: var(--color-gray-600); margin-bottom: 1rem;" data-i18n="contact.gcal.desc">Select a time that works for you. Appointments sync directly with our Google Calendar — no third-party booking tool required.</p>
 
-            <p style="margin-bottom: 1.5rem;">
-
-              <a id="gcal-booking-link" href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer" hidden data-i18n="contact.gcal.open">Open booking page in new tab</a>
-
-            </p>
-
             <div id="gcal-setup-notice" class="gcal-setup-notice" data-i18n-html="contact.gcal.setup"></div>
 
-            <div class="gcal-booking-wrap">
+            <div class="gcal-booking-stack">
 
-              <iframe id="gcal-booking-frame" title="Book a consultation" hidden></iframe>
+              <div class="gcal-booking-wrap">
+
+                <iframe id="gcal-booking-frame" title="Book a consultation"></iframe>
+
+              </div>
+
+              <div class="gcal-booking-footer">
+
+                <a id="gcal-booking-link" href="https://calendar.app.google/hchecrUGT8AgUvNs6" class="gcal-booking-external-link" target="_blank" rel="noopener noreferrer" data-i18n="contact.gcal.open">Open booking page in new tab</a>
+
+              </div>
 
             </div>
 
