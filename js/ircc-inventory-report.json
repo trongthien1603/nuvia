@@ -1,0 +1,74 @@
+{
+  "asOfDate": "October 31, 2025",
+  "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/reports-statistics/statistics-open-data/immigration-stats/application-inventory.html",
+  "overview": {
+    "totalApplications": 2182200,
+    "withinServiceStandards": 1175500,
+    "inBacklog": 1006700
+  },
+  "categories": {
+    "temporaryResidence": {
+      "total": 999100,
+      "withinServiceStandards": 548500,
+      "backlog": 450700,
+      "backlogPercent": 45
+    },
+    "permanentResidence": {
+      "total": 928800,
+      "withinServiceStandards": 427500,
+      "backlog": 501300,
+      "backlogPercent": 54
+    },
+    "citizenship": {
+      "total": 254300,
+      "withinServiceStandards": 199500,
+      "backlog": 54800,
+      "backlogPercent": 22
+    }
+  },
+  "prBacklogStatus": [
+    {
+      "programKey": "ptime.inventory.pr.fsw",
+      "program": "Federal Skilled Worker",
+      "backlogPercent": 27,
+      "vsMonth": 6,
+      "vsYear": 8
+    },
+    {
+      "programKey": "ptime.inventory.pr.pnp",
+      "program": "Provincial Nominee Program (Express Entry)",
+      "backlogPercent": 51,
+      "vsMonth": 4,
+      "vsYear": 26
+    },
+    {
+      "programKey": "ptime.inventory.pr.spouse",
+      "program": "Spouse & Partner",
+      "backlogPercent": 20,
+      "vsMonth": 1,
+      "vsYear": 5
+    }
+  ],
+  "highlights": [
+    {
+      "value": "343,400",
+      "labelKey": "ptime.inventory.highlight.prWelcome"
+    },
+    {
+      "value": "377,100",
+      "labelKey": "ptime.inventory.highlight.prDecisions"
+    },
+    {
+      "value": "156,500",
+      "labelKey": "ptime.inventory.highlight.citizens"
+    },
+    {
+      "value": "501,800",
+      "labelKey": "ptime.inventory.highlight.studyFinalized"
+    },
+    {
+      "value": "1,111,000",
+      "labelKey": "ptime.inventory.highlight.workFinalized"
+    }
+  ]
+}

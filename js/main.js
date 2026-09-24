@@ -192,27 +192,12 @@ function initGoogleCalendarBooking() {
 
 
   if (SITE_CONFIG.googleCalendarBookingUrl) {
-
     frame.src = SITE_CONFIG.googleCalendarBookingUrl;
-
-    frame.hidden = false;
-
-    if (link) {
-
-      link.href = SITE_CONFIG.googleCalendarBookingUrl;
-
-      link.hidden = false;
-
-    }
-
+    if (link) link.href = SITE_CONFIG.googleCalendarBookingUrl;
     if (setup) setup.hidden = true;
-
   } else {
-
-    frame.hidden = true;
-
+    frame.removeAttribute("src");
     if (setup) setup.hidden = false;
-
   }
 
 }
@@ -347,19 +332,13 @@ async function initContactForm() {
     }
 
     const payload = {
-
+      formType: "contact",
       name: form.name.value.trim(),
-
       email: form.email.value.trim(),
-
       phone: form.phone.value.trim(),
-
       service: form.service.value,
-
       message: form.message.value.trim(),
-
       language: lang,
-
     };
 
 
@@ -397,17 +376,24 @@ async function initContactForm() {
 
 
     try {
-      const formData = new URLSearchParams();
-      Object.entries(payload).forEach(([key, value]) => {
-        formData.append(key, value);
+      const params = new URLSearchParams({
+        source: "website-contact-form",
+        formType: "contact",
+        name: payload.name,
+        email: payload.email,
+        phone: payload.phone,
+        service: payload.service,
+        message: payload.message,
+        language: payload.language,
       });
 
-      // GAS no-cors POST may never resolve in the browser even when the row is saved.
+      const requestUrl = `${SITE_CONFIG.googleScriptUrl}?${params.toString()}`;
+
+      // GET is more reliable than POST for Google Apps Script web apps on static sites.
       await Promise.race([
-        fetch(SITE_CONFIG.googleScriptUrl, {
-          method: "POST",
+        fetch(requestUrl, {
+          method: "GET",
           mode: "no-cors",
-          body: formData,
         }),
         new Promise((resolve) => setTimeout(resolve, 2500)),
       ]);

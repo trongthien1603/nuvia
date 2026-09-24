@@ -1,0 +1,59 @@
+{
+  "date": "September 16, 2026",
+  "sections": {
+    "work": {
+      "lastupdated": "September 16, 2026",
+      "countries": {
+        "CA": { "value": "109 days", "days": 109 },
+        "US": { "value": "3 weeks", "days": 21 },
+        "IN": { "value": "10 weeks", "days": 70 },
+        "PH": { "value": "7 weeks", "days": 49 },
+        "PK": { "value": "8 weeks", "days": 56 },
+        "NG": { "value": "10 weeks", "days": 70 },
+        "VN": { "value": "5 weeks", "days": 35 },
+        "CN": { "value": "4 weeks", "days": 28 },
+        "FR": { "value": "3 weeks", "days": 21 }
+      }
+    },
+    "study": {
+      "lastupdated": "September 16, 2026",
+      "countries": {
+        "CA": { "value": "7 weeks", "days": 49 },
+        "US": { "value": "6 weeks", "days": 42 },
+        "IN": { "value": "5 weeks", "days": 35 },
+        "PH": { "value": "5 weeks", "days": 35 },
+        "PK": { "value": "7 weeks", "days": 49 },
+        "NG": { "value": "9 weeks", "days": 63 },
+        "VN": { "value": "4 weeks", "days": 28 },
+        "CN": { "value": "4 weeks", "days": 28 },
+        "FR": { "value": "4 weeks", "days": 28 }
+      }
+    },
+    "visitor-outside-canada": {
+      "lastupdated": "September 16, 2026",
+      "countries": {
+        "US": { "value": "18 days", "days": 18 },
+        "IN": { "value": "34 days", "days": 34 },
+        "PH": { "value": "19 days", "days": 19 },
+        "PK": { "value": "76 days", "days": 76 },
+        "NG": { "value": "90 days", "days": 90 },
+        "VN": { "value": "34 days", "days": 34 },
+        "CN": { "value": "35 days", "days": 35 },
+        "FR": { "value": "38 days", "days": 38 }
+      }
+    },
+    "supervisa": {
+      "lastupdated": "September 16, 2026",
+      "countries": {
+        "US": { "value": "66 days", "days": 66 },
+        "IN": { "value": "69 days", "days": 69 },
+        "PH": { "value": "64 days", "days": 64 },
+        "PK": { "value": "132 days", "days": 132 },
+        "NG": { "value": "44 days", "days": 44 },
+        "VN": { "value": "40 days", "days": 40 },
+        "CN": { "value": "77 days", "days": 77 },
+        "FR": { "value": "110 days", "days": 110 }
+      }
+    }
+  }
+}
