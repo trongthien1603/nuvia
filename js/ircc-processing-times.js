@@ -1138,7 +1138,7 @@ async function loadIrccProcessingTimes() {
         : ptimeT("ptime.loaded", "Official IRCC data loaded.");
     }
 
-    if (window.NuviaI18n) window.NuviaI18n.applyTranslations();
+    if (window.NuviaI18n) window.NuviaI18n.applyStaticTranslations(window.NuviaI18n.getLang());
   } catch (error) {
     if (status) {
       status.innerHTML = `${ptimeT("ptime.error", "Unable to load live data.")} <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" target="_blank" rel="noopener noreferrer" data-i18n="ptime.officialLink">View on IRCC</a>`;
@@ -1147,7 +1147,7 @@ async function loadIrccProcessingTimes() {
       "ptime.fallback",
       "Visit the official IRCC processing times tool for the latest estimates."
     )}</p>`;
-    if (window.NuviaI18n) window.NuviaI18n.applyTranslations();
+    if (window.NuviaI18n) window.NuviaI18n.applyStaticTranslations(window.NuviaI18n.getLang());
   }
 }
 
@@ -1155,12 +1155,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const embeddedReport = getInventoryReport();
   if (embeddedReport) renderInventoryReport(embeddedReport);
   loadIrccProcessingTimes();
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      countryHistoriesCache = null;
-      window.setTimeout(loadIrccProcessingTimes, 50);
-    });
-  });
+});
+
+document.addEventListener("nuvia:lang-changed", () => {
+  countryHistoriesCache = null;
 });
 
 window.loadIrccProcessingTimes = loadIrccProcessingTimes;

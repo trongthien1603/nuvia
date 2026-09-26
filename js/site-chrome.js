@@ -10,8 +10,13 @@ function markSiteBannersShown() {
   sessionStorage.setItem(SITE_BANNERS_SESSION_KEY, "1");
 }
 
+document.addEventListener("nuvia:lang-changed", () => {
+  if (window.NuviaI18n) window.NuviaI18n.applyStaticTranslations(window.NuviaI18n.getLang());
+});
+
 document.addEventListener("DOMContentLoaded", () => {
-  injectFooterCicc();
+  injectFooterMemberBadges();
+  relocateFooterDisclosure();
   const showSiteBanners = shouldShowSiteBanners();
   if (showSiteBanners) {
     initCookieBanner();
@@ -29,23 +34,38 @@ function t(key, fallback) {
   return window.NuviaI18n ? window.NuviaI18n.t(key) : fallback;
 }
 
-function injectFooterCicc() {
-  const brand = document.querySelector(".site-footer .footer-brand");
-  if (!brand || brand.querySelector(".footer-cicc-inline")) return;
+function injectFooterMemberBadges() {
+  document.querySelectorAll(".footer-brand").forEach((brand) => {
+    if (brand.querySelector(".footer-member-badges")) return;
 
-  document.querySelectorAll(".site-footer .footer-cicc").forEach((el) => el.remove());
+    const badges = document.createElement("div");
+    badges.className = "footer-member-badges";
+    badges.innerHTML = `
+      <a href="https://www.college-ic.ca" target="_blank" rel="noopener noreferrer" class="footer-member-logo footer-member-logo--cicc">
+        <img src="assets/cicc-logo.png" alt="College of Immigration and Citizenship Consultants (CICC)" width="180" height="44" loading="lazy">
+      </a>
+      <a href="https://www.capic.ca/" target="_blank" rel="noopener noreferrer" class="footer-member-logo footer-member-logo--capic">
+        <img src="assets/capic-logo.jpg" alt="CAPIC — ACCPI" width="160" height="44" loading="lazy">
+      </a>
+    `;
+    brand.appendChild(badges);
+  });
+}
 
-  const block = document.createElement("div");
-  block.className = "footer-cicc-inline";
-  block.innerHTML = `
-    <a href="https://www.college-ic.ca" target="_blank" rel="noopener noreferrer" class="footer-cicc-link">
-      <img src="assets/cicc-logo.svg" alt="College of Immigration and Citizenship Consultants (CICC)" width="180" height="50">
-    </a>
-    <p data-i18n="footer.cicc">${t("footer.cicc", "Licensed RCIC in good standing with CICC. Verify our credentials at college-ic.ca.")}</p>
-  `;
+function relocateFooterDisclosure() {
+  document.querySelectorAll(".site-footer .container").forEach((footer) => {
+    const disclosure = footer.querySelector(".rcic-disclosure");
+    const bottom = footer.querySelector(".footer-bottom");
+    if (!disclosure || !bottom) return;
 
-  brand.appendChild(block);
-  if (window.NuviaI18n) window.NuviaI18n.applyTranslations();
+    footer.querySelectorAll(".footer-regulatory").forEach((el) => {
+      while (el.firstChild) el.parentNode.insertBefore(el.firstChild, el);
+      el.remove();
+    });
+
+    disclosure.classList.add("footer-disclosure-bottom");
+    bottom.parentNode.insertBefore(disclosure, bottom);
+  });
 }
 
 function initCookieBanner() {
@@ -64,7 +84,7 @@ function initCookieBanner() {
   `;
   document.body.appendChild(banner);
 
-  if (window.NuviaI18n) window.NuviaI18n.applyTranslations();
+  if (window.NuviaI18n) window.NuviaI18n.applyStaticTranslations(window.NuviaI18n.getLang());
 
   banner.querySelector(".cookie-accept").addEventListener("click", () => {
     banner.remove();
@@ -93,7 +113,7 @@ function initConsultPopup() {
   document.body.appendChild(overlay);
   document.body.appendChild(popup);
 
-  if (window.NuviaI18n) window.NuviaI18n.applyTranslations();
+  if (window.NuviaI18n) window.NuviaI18n.applyStaticTranslations(window.NuviaI18n.getLang());
 
   function closePopup() {
     popup.hidden = true;
@@ -254,28 +274,42 @@ function initServicesProgramView() {
   syncFromHash();
 }
 
+function setPricingTierHighlight(key) {
+  const tiers = document.querySelectorAll(".pricing-tier[data-tier]");
+  const legendPills = document.querySelectorAll("[data-tier-highlight]");
+  document.body.classList.remove("highlight-tier-review", "highlight-tier-guided", "highlight-tier-full");
+  tiers.forEach((tier) => tier.classList.remove("is-active"));
+  legendPills.forEach((pill) => pill.classList.remove("is-active"));
+  if (!key) return;
+  document.body.classList.add(`highlight-tier-${key}`);
+  document.querySelector(`.pricing-tier[data-tier="${key}"]`)?.classList.add("is-active");
+  document.querySelector(`[data-tier-highlight="${key}"]`)?.classList.add("is-active");
+}
+
 function initPricingTierHover() {
   const tiers = document.querySelectorAll(".pricing-tier[data-tier]");
   if (!tiers.length) return;
 
-  const clearHighlight = () => {
-    document.body.classList.remove("highlight-tier-review", "highlight-tier-guided", "highlight-tier-full");
-    tiers.forEach((tier) => tier.classList.remove("is-active"));
-  };
+  const clearHighlight = () => setPricingTierHighlight(null);
 
   tiers.forEach((tier) => {
     const key = tier.dataset.tier;
-    tier.addEventListener("mouseenter", () => {
-      clearHighlight();
-      tier.classList.add("is-active");
-      document.body.classList.add(`highlight-tier-${key}`);
-    });
-    tier.addEventListener("focusin", () => {
-      clearHighlight();
-      tier.classList.add("is-active");
-      document.body.classList.add(`highlight-tier-${key}`);
-    });
+    tier.addEventListener("mouseenter", () => setPricingTierHighlight(key));
+    tier.addEventListener("focusin", () => setPricingTierHighlight(key));
     tier.addEventListener("mouseleave", clearHighlight);
     tier.addEventListener("focusout", clearHighlight);
+  });
+
+  document.querySelectorAll("[data-tier-highlight]").forEach((pill) => {
+    const key = pill.dataset.tierHighlight;
+    pill.addEventListener("mouseenter", () => setPricingTierHighlight(key));
+    pill.addEventListener("focusin", () => setPricingTierHighlight(key));
+    pill.addEventListener("mouseleave", clearHighlight);
+    pill.addEventListener("focusout", clearHighlight);
+    pill.addEventListener("click", () => {
+      const tierEl = document.querySelector(`.pricing-tier[data-tier="${key}"]`);
+      tierEl?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      setPricingTierHighlight(key);
+    });
   });
 }

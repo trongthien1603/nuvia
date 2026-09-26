@@ -56,11 +56,6 @@
 
     <section class="bg-light" id="services-overview">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label" data-i18n="home.services.label">What We Offer</span>
-          <h2 data-i18n="home.services.title">Comprehensive Immigration Services</h2>
-          <p data-i18n="home.services.desc">From initial assessment to final approval, we guide you through every step.</p>
-        </div>
         <div class="card-grid card-grid-3">
           <a href="services.html#express-entry" class="card service-card" data-program="express-entry">
             <div class="card-icon">🍁</div>
@@ -87,6 +82,11 @@
             <h3 data-i18n="home.svc.business.title">Business Immigration</h3>
             <p data-i18n="home.svc.business.desc">Start-up visa and provincial entrepreneur streams.</p>
           </a>
+          <a href="services.html#employers" class="card service-card" data-program="employers">
+            <div class="card-icon">🏢</div>
+            <h3 data-i18n="services.employers.card.title">Employers & Hiring</h3>
+            <p data-i18n="services.employers.card.desc">LMIA, compliance, and work permit support for Canadian employers.</p>
+          </a>
           <a href="services.html#appeals" class="card service-card" data-program="appeals">
             <div class="card-icon">⚖️</div>
             <h3 data-i18n="home.svc.appeals.title">Appeals & Refusals</h3>
@@ -104,6 +104,7 @@
           <a href="#study-work" data-program="study-work" data-i18n="services.nav.study">Study & Work</a>
           <a href="#family" data-program="family" data-i18n="services.nav.family">Family</a>
           <a href="#business" data-program="business" data-i18n="services.nav.business">Business</a>
+          <a href="#employers" data-program="employers" data-i18n="services.nav.employers">Employers</a>
           <a href="#appeals" data-program="appeals" data-i18n="services.nav.appeals">Appeals</a>
         </div>
       </nav>
@@ -170,14 +171,11 @@
           <h2 data-i18n="services.pnp.title">Provincial Nominee Programs (PNP)</h2>
           <p data-i18n="services.pnp.desc">Provincial streams offer additional pathways to permanent residence across Canada.</p>
         </div>
-        <div class="program-detail-card">
-          <ul class="program-features">
-            <li data-i18n="services.pnp.f1">Ontario Immigrant Nominee Program (OINP)</li>
-            <li data-i18n="services.pnp.f2">BC Provincial Nominee Program (BC PNP)</li>
-            <li data-i18n="services.pnp.f3">Quebec and other provincial programs</li>
-            <li data-i18n="services.pnp.f4">Express Entry-linked and base nominations</li>
-          </ul>
+
+        <div class="services-pnp-overview">
+          <div class="card-grid card-grid-3" id="services-pnp-overview-grid"></div>
         </div>
+
         <h3 class="program-faq-title" data-i18n="services.faq.heading">Common Questions</h3>
         <div class="faq-grid">
           <div class="faq-item">
@@ -372,6 +370,174 @@
       </div>
     </section>
 
+    <section class="program-section" id="employers">
+      <div class="container">
+        <div class="program-header">
+          <h2 data-i18n="services.employers.title">Employers & Foreign Worker Programs</h2>
+          <p data-i18n="services.employers.desc">Canadian employers use our RCIC team to navigate hiring, compliance, and temporary foreign worker pathways.</p>
+          <p class="pnp-program-subtitle" data-i18n="services.employers.lead">From LMIAs and the Global Talent Stream to LMIA-exempt permits, intra-company transfers, employer-supported permanent residence, and compliance—we help you hire and retain global talent with defensible applications.</p>
+        </div>
+
+        <div class="calc-card employers-intro-card">
+          <h3 data-i18n="services.employers.partner.title">One partner for your global workforce</h3>
+          <p data-i18n="services.employers.partner.p1">Hiring internationally touches HR, payroll, legal, and leadership at once. We give you a single regulated point of contact who maps the right pathway for each role, prepares employer documentation, and coordinates worker permit steps.</p>
+          <p data-i18n="services.employers.partner.p2">Whether you are filling one specialized role, transferring an executive, or planning multi-province hiring, we translate IRCC and ESDC requirements into a practical timeline your team can execute.</p>
+          <h4 data-i18n="services.employers.who.title">Who we work with</h4>
+          <ul class="program-features">
+            <li data-i18n="services.employers.who.1">HR and talent-acquisition teams hiring foreign workers</li>
+            <li data-i18n="services.employers.who.2">Founders and startups competing for specialized talent</li>
+            <li data-i18n="services.employers.who.3">In-house counsel managing immigration risk and compliance</li>
+            <li data-i18n="services.employers.who.4">Employers transferring staff into Canadian operations</li>
+          </ul>
+        </div>
+
+        <h3 class="program-faq-title" data-i18n="services.employers.services.title">Our corporate immigration services</h3>
+        <p class="calc-note" data-i18n="services.employers.services.intro">Six core services covering the full lifecycle of hiring and mobilizing international talent in Canada.</p>
+        <div class="card-grid card-grid-2 program-subgrid employers-service-grid">
+          <article class="card employers-service-card">
+            <p class="employers-service-tag" data-i18n="services.employers.s1.tag">Temporary Foreign Worker Program</p>
+            <h3 data-i18n="services.employers.s1.title">LMIA applications</h3>
+            <p data-i18n="services.employers.s1.desc">Choose the right LMIA stream and submit a complete, defensible application to Service Canada / ESDC.</p>
+            <ul>
+              <li data-i18n="services.employers.s1.b1">High-wage, low-wage, PR-support, and agriculture streams</li>
+              <li data-i18n="services.employers.s1.b2">Recruitment, advertising, and prevailing-wage evidence</li>
+              <li data-i18n="services.employers.s1.b3">Business-legitimacy and job-offer documentation</li>
+            </ul>
+          </article>
+          <article class="card employers-service-card">
+            <p class="employers-service-tag" data-i18n="services.employers.s2.tag">Fast-track specialized talent</p>
+            <h3 data-i18n="services.employers.s2.title">Global Talent Stream</h3>
+            <p data-i18n="services.employers.s2.desc">Expedited processing for unique, in-demand, highly skilled workers with a Labour Market Benefits Plan.</p>
+            <ul>
+              <li data-i18n="services.employers.s2.b1">Category A and Category B eligibility review</li>
+              <li data-i18n="services.employers.s2.b2">Labour Market Benefits Plan preparation</li>
+              <li data-i18n="services.employers.s2.b3">Coordinated work-permit filing for tech and specialized roles</li>
+            </ul>
+          </article>
+          <article class="card employers-service-card">
+            <p class="employers-service-tag" data-i18n="services.employers.s3.tag">International Mobility Program</p>
+            <h3 data-i18n="services.employers.s3.title">LMIA-exempt work permits</h3>
+            <p data-i18n="services.employers.s3.desc">Bring workers to Canada without an LMIA when an exemption applies under the International Mobility Program.</p>
+            <ul>
+              <li data-i18n="services.employers.s3.b1">Treaty, reciprocal, and significant-benefit exemptions</li>
+              <li data-i18n="services.employers.s3.b2">Employer compliance fee and offer-of-employment portal</li>
+              <li data-i18n="services.employers.s3.b3">Often faster than a full LMIA where eligible</li>
+            </ul>
+          </article>
+          <article class="card employers-service-card">
+            <p class="employers-service-tag" data-i18n="services.employers.s4.tag">Move key staff to Canada</p>
+            <h3 data-i18n="services.employers.s4.title">Intra-company transfer & CUSMA</h3>
+            <p data-i18n="services.employers.s4.desc">Transfer executives, managers, and specialized-knowledge staff into your Canadian entity.</p>
+            <ul>
+              <li data-i18n="services.employers.s4.b1">Qualifying corporate relationship documentation</li>
+              <li data-i18n="services.employers.s4.b2">Executive, managerial, and specialized-knowledge roles</li>
+              <li data-i18n="services.employers.s4.b3">CUSMA professionals, traders, and investors</li>
+            </ul>
+          </article>
+          <article class="card employers-service-card">
+            <p class="employers-service-tag" data-i18n="services.employers.s5.tag">Retain talent long-term</p>
+            <h3 data-i18n="services.employers.s5.title">Employer-supported PR & PNP</h3>
+            <p data-i18n="services.employers.s5.desc">Help valued employees move to permanent residence through employer-supported and provincial nominee pathways.</p>
+            <ul>
+              <li data-i18n="services.employers.s5.b1">Provincial Nominee Program employer streams</li>
+              <li data-i18n="services.employers.s5.b2">Job-offer support for Express Entry candidates</li>
+              <li data-i18n="services.employers.s5.b3">Workforce retention and succession planning</li>
+            </ul>
+          </article>
+          <article class="card employers-service-card">
+            <p class="employers-service-tag" data-i18n="services.employers.s6.tag">Stay inspection-ready</p>
+            <h3 data-i18n="services.employers.s6.title">Employer compliance & advisory</h3>
+            <p data-i18n="services.employers.s6.desc">Meet wage, record-keeping, and working-condition obligations and prepare for IRCC and ESDC inspections.</p>
+            <ul>
+              <li data-i18n="services.employers.s6.b1">Compliance reviews and record-keeping systems</li>
+              <li data-i18n="services.employers.s6.b2">Inspection and audit readiness</li>
+              <li data-i18n="services.employers.s6.b3">Ongoing advisory for HR and legal teams</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="employer-process-panel">
+        <h3 class="program-faq-title employer-process-heading" data-i18n="services.employers.process.title">A clear path from open role to approval</h3>
+        <p class="employer-process-intro" data-i18n="services.employers.process.intro">Four regulated stages—from eligibility review to post-hire compliance—so HR and leadership know what happens next.</p>
+        <ol class="employer-process-track" aria-label="Employer immigration process">
+          <li class="employer-process-step">
+            <span class="employer-process-num" aria-hidden="true">1</span>
+            <div class="employer-process-body">
+              <h4 data-i18n="services.employers.step1.title">Assess</h4>
+              <p data-i18n="services.employers.step1.desc">We review the role, the worker, and your business to confirm whether an LMIA, LMIA-exempt route, or PR pathway fits best.</p>
+            </div>
+          </li>
+          <li class="employer-process-step">
+            <span class="employer-process-num" aria-hidden="true">2</span>
+            <div class="employer-process-body">
+              <h4 data-i18n="services.employers.step2.title">Strategy</h4>
+              <p data-i18n="services.employers.step2.desc">You receive a written plan: recommended program, documents, realistic timelines, costs, and compliance obligations.</p>
+            </div>
+          </li>
+          <li class="employer-process-step">
+            <span class="employer-process-num" aria-hidden="true">3</span>
+            <div class="employer-process-body">
+              <h4 data-i18n="services.employers.step3.title">Prepare &amp; file</h4>
+              <p data-i18n="services.employers.step3.desc">We assemble and submit employer and worker packages where authorized and coordinate permit or PR steps.</p>
+            </div>
+          </li>
+          <li class="employer-process-step">
+            <span class="employer-process-num" aria-hidden="true">4</span>
+            <div class="employer-process-body">
+              <h4 data-i18n="services.employers.step4.title">Comply</h4>
+              <p data-i18n="services.employers.step4.desc">We help you meet ongoing wage, record-keeping, and inspection obligations after the hire is in place.</p>
+            </div>
+          </li>
+        </ol>
+        </div>
+
+        <h3 class="program-faq-title" data-i18n="services.faq.heading">Employer immigration questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q1">Can Nuvia represent our company and the worker?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a1">Yes — we can support employer compliance files and separate representation agreements for workers when appropriate.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q2">How long does an LMIA take?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a2">Timelines depend on stream, occupation, and Service Canada processing. We build realistic recruitment timelines into your hiring plan.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q3">Do you help with PNP employer nominations?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a3">We advise on provincial employer streams where the role and business meet program criteria.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q4">Does our business always need an LMIA?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a4">No. Many roles qualify under LMIA-exempt permits, intra-company transfers, or CUSMA. We review the role and worker before recommending a pathway.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q5">Who is responsible for compliance after we hire?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a5">The employer must keep records and meet wage, duty, and working-condition commitments tied to the job offer. We help you build inspection-ready systems.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q6">Can an employer help a worker become a permanent resident?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a6">Often yes—PNP employer streams and job offers supporting Express Entry can help retain staff long term when criteria are met.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q7">What is the difference between high-wage and low-wage LMIAs?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a7">High-wage and low-wage streams follow different recruitment, transition, and housing rules under the Temporary Foreign Worker Program. We classify the role using prevailing wage and location data before you advertise or submit.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q8">Can we hire a worker who is already in Canada?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a8">Often yes, depending on current status, implied conditions, and whether a new work permit or LMIA is required. We review passports, permits, and job changes before you extend an offer or file.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q9">What documents should HR keep for immigration compliance?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a9">Keep signed job offers, LMIA or exemption records, recruitment evidence, payroll showing prevailing wage, and correspondence with IRCC or Service Canada. We provide checklists aligned to your program so inspections are manageable.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" data-i18n="services.employers.faq.q10">Do you work with startups and small employers?</button>
+            <div class="faq-answer" data-i18n="services.employers.faq.a10">Yes. Smaller employers must still prove business legitimacy and ability to meet wage and working-condition commitments. We scale documentation and recruitment plans to your size while keeping applications defensible.</div>
+          </div>
+        </div>
+        <p style="margin-top:1.5rem;text-align:center;"><a href="contact.html#book" class="btn btn-primary" data-i18n="services.employers.cta">Book an employer consultation</a></p>
+      </div>
+    </section>
+
     <section class="program-section bg-light" id="appeals">
       <div class="container">
         <div class="program-header">
@@ -424,28 +590,20 @@
       </div>
     </section>
 
-      <section class="bg-light services-program-cta">
+      <section class="cta-banner services-fit-cta">
         <div class="container">
-          <div class="section-header">
-            <h2 data-i18n="services.cta.title">Not Sure Which Program Fits You?</h2>
-            <p data-i18n="services.cta.desc">Our initial consultation includes a comprehensive eligibility assessment.</p>
-          </div>
-          <div style="text-align: center;">
-            <a href="contact.html#book" class="btn btn-primary" data-i18n="services.cta.btn">Book Your Assessment</a>
-          </div>
+          <h2 data-i18n="services.cta.title">Not Sure Which Program Fits You?</h2>
+          <p data-i18n="services.cta.desc">Our initial consultation includes a comprehensive eligibility assessment to identify the best pathway for your unique situation.</p>
+          <a href="contact.html#book" class="btn btn-outline" data-i18n="services.cta.btn">Book Your Assessment</a>
         </div>
       </section>
     </div>
 
-    <section class="bg-light" id="services-overview-cta">
+    <section class="cta-banner services-fit-cta" id="services-overview-cta">
       <div class="container">
-        <div class="section-header">
-          <h2 data-i18n="services.cta.title">Not Sure Which Program Fits You?</h2>
-          <p data-i18n="services.cta.desc">Our initial consultation includes a comprehensive eligibility assessment.</p>
-        </div>
-        <div style="text-align: center;">
-          <a href="contact.html#book" class="btn btn-primary" data-i18n="services.cta.btn">Book Your Assessment</a>
-        </div>
+        <h2 data-i18n="services.cta.title">Not Sure Which Program Fits You?</h2>
+        <p data-i18n="services.cta.desc">Our initial consultation includes a comprehensive eligibility assessment to identify the best pathway for your unique situation.</p>
+        <a href="contact.html#book" class="btn btn-outline" data-i18n="services.cta.btn">Book Your Assessment</a>
       </div>
     </section>
   </main>
@@ -514,5 +672,8 @@
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script src="js/site-chrome.js"></script>
+  <script src="js/pnp-draws-data.js"></script>
+  <script src="js/pnp-program-profiles.js"></script>
+  <script src="js/pnp-resources.js"></script>
 </body>
 </html>

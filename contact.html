@@ -24,7 +24,7 @@
 
 </head>
 
-<body data-page-title="meta.contactTitle">
+<body class="page-contact" data-page-title="meta.contactTitle">
 
   <header class="site-header">
 
@@ -112,13 +112,13 @@
 
       <div class="container contact-layout">
 
-        <aside>
+        <aside class="contact-aside">
 
           <span class="section-label" data-i18n="contact.label">Get in Touch</span>
 
           <h2 data-i18n="contact.title">We'd Love to Hear From You</h2>
 
-          <p style="color: var(--color-gray-600); margin-bottom: 2rem;" data-i18n="contact.intro">Our team is here to help.</p>
+          <p class="contact-intro" data-i18n="contact.intro">Our team is here to help.</p>
 
 
 
@@ -126,11 +126,11 @@
 
             <div class="contact-info-icon">✉️</div>
 
-            <div>
+            <div class="contact-info-body">
 
-              <strong data-i18n="contact.email">Email</strong><br>
+              <strong class="contact-info-label" data-i18n="contact.email">Email</strong>
 
-              <a href="mailto:nuvia.immigration@gmail.com" data-config="email">nuvia.immigration@gmail.com</a>
+              <a class="contact-info-value" href="mailto:nuvia.immigration@gmail.com" data-config="email">nuvia.immigration@gmail.com</a>
 
             </div>
 
@@ -140,11 +140,11 @@
 
             <div class="contact-info-icon">📞</div>
 
-            <div>
+            <div class="contact-info-body">
 
-              <strong data-i18n="contact.phone">Phone</strong><br>
+              <strong class="contact-info-label" data-i18n="contact.phone">Phone</strong>
 
-              <a href="tel:+15148958603" data-config="phone">+1 (514) 895-8603</a>
+              <a class="contact-info-value" href="tel:+15148958603" data-config="phone">+1 (514) 895-8603</a>
 
             </div>
 
@@ -154,11 +154,11 @@
 
             <div class="contact-info-icon">📍</div>
 
-            <div>
+            <div class="contact-info-body">
 
-              <strong data-i18n="contact.office">Office</strong><br>
+              <strong class="contact-info-label" data-i18n="contact.office">Office</strong>
 
-              <span data-config="location">Montreal, Quebec, Canada</span>
+              <span class="contact-info-value" data-config="location">Montreal, Quebec, Canada</span>
 
             </div>
 
@@ -168,13 +168,13 @@
 
             <div class="contact-info-icon">🕐</div>
 
-            <div>
+            <div class="contact-info-body">
 
-              <strong data-i18n="contact.hours">Hours</strong><br>
+              <strong class="contact-info-label" data-i18n="contact.hours">Hours</strong>
 
-              <span data-i18n="contact.hours.val">Monday – Friday: 9:00 AM – 5:00 PM EST</span><br>
+              <span class="contact-info-value contact-hours-weekdays" data-i18n="contact.hours.val">Monday – Friday: 9:00 AM – 5:00 PM EST</span>
 
-              <span data-i18n="contact.hours.closed">Saturday – Sunday: Closed</span>
+              <span class="contact-info-value" data-i18n="contact.hours.closed">Saturday – Sunday: Closed</span>
 
             </div>
 
@@ -200,7 +200,7 @@
 
 
 
-        <div>
+        <div class="contact-main">
 
           <div class="contact-tabs" id="book">
 
@@ -214,7 +214,7 @@
 
           <div class="contact-panel active" data-panel="booking">
 
-            <p style="color: var(--color-gray-600); margin-bottom: 1rem;" data-i18n="contact.gcal.desc">Select a time that works for you. Appointments sync directly with our Google Calendar — no third-party booking tool required.</p>
+            <p class="contact-gcal-lead" data-i18n="contact.gcal.desc">Select a time that works for you. Appointments sync directly with our Google Calendar — no third-party booking tool required.</p>
 
             <div id="gcal-setup-notice" class="gcal-setup-notice" data-i18n-html="contact.gcal.setup"></div>
 

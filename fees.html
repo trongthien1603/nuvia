@@ -56,54 +56,81 @@
 
     <section>
       <div class="container">
-        <div class="fees-section fees-consult-section">
-          <h2 data-i18n="fees.consult.title">Consultations</h2>
-          <p data-i18n="fees.consult.desc">Initial consultations help us assess your eligibility and recommend the best pathway. Consultation fees apply to all programs and are separate from the application service tiers below.</p>
-          <div class="fees-consult-grid" data-fees-catalog="consult" data-catalog="consult"></div>
-        </div>
+        <section class="fees-consult-panel" aria-labelledby="fees-consult-heading">
+          <header class="fees-consult-panel-header">
+            <p class="section-label" data-i18n="fees.consult.eyebrow">Start with a conversation</p>
+            <h2 id="fees-consult-heading" class="section-title-single-line" data-i18n="fees.consult.title">Consultations</h2>
+          </header>
+          <div class="fees-consult-panel-grid" data-fees-catalog="consult" data-catalog="consult"></div>
+        </section>
 
-        <p style="text-align:center;color:var(--color-gray-600);max-width:640px;margin:0 auto 1.5rem;" data-i18n="fees.tiers.desc">Not everyone needs the same level of support. Hover a tier to highlight matching fees below, then expand a service for details.</p>
-        <div class="pricing-tiers">
-          <div class="pricing-tier" data-tier="review" tabindex="0">
-            <span class="tier-badge" data-i18n="fees.tier.option1">Option 1</span>
-            <h3 data-i18n="fees.tier.review.title">Document Review</h3>
-            <p class="tier-tagline" data-i18n="fees.tier.review.tagline">You prepare your application — we review before you submit.</p>
-            <ul>
-              <li data-i18n="fees.tier.review.f1">Expert review of forms & documents</li>
-              <li data-i18n="fees.tier.review.f2">Feedback on gaps & risks</li>
-              <li data-i18n="fees.tier.review.f3">Written recommendations</li>
-              <li data-i18n="fees.tier.review.f4">Peace of mind before filing</li>
-            </ul>
-            <p class="tier-from" data-i18n="fees.tier.from">Quoted after free consultation</p>
+        <section class="fees-tiers-block" aria-labelledby="fees-tiers-heading">
+          <header class="fees-tiers-header">
+            <h2 id="fees-tiers-heading" class="section-title-single-line" data-i18n="fees.tiers.title">How We Can Help With Your Application</h2>
+            <p data-i18n="fees.tiers.desc">Not everyone needs the same level of support. Hover a tier to highlight matching fees below, then expand a service for details.</p>
+            <div class="fees-tier-legend" role="group" data-i18n-title="fees.tiers.legendAria">
+              <button type="button" class="fees-tier-legend-pill" data-tier-highlight="review" data-i18n-title="fees.tier.option1">
+                <span class="fees-tier-legend-swatch fees-tier-legend-swatch--review" aria-hidden="true"></span>
+                <span data-i18n="fees.tier.legendShort1">Option 1</span>
+              </button>
+              <button type="button" class="fees-tier-legend-pill" data-tier-highlight="guided" data-i18n-title="fees.tier.option2">
+                <span class="fees-tier-legend-swatch fees-tier-legend-swatch--guided" aria-hidden="true"></span>
+                <span data-i18n="fees.tier.legendShort2">Option 2</span>
+              </button>
+              <button type="button" class="fees-tier-legend-pill" data-tier-highlight="full" data-i18n-title="fees.tier.option3">
+                <span class="fees-tier-legend-swatch fees-tier-legend-swatch--full" aria-hidden="true"></span>
+                <span data-i18n="fees.tier.legendShort3">Option 3</span>
+              </button>
+            </div>
+          </header>
+          <div class="pricing-tiers pricing-tiers--journey">
+            <div class="pricing-tier pricing-tier--review" data-tier="review" tabindex="0">
+              <div class="tier-step" aria-hidden="true">1</div>
+              <div class="tier-icon tier-icon--review" aria-hidden="true"></div>
+              <span class="tier-badge" data-i18n="fees.tier.option1">Option 1</span>
+              <h3 data-i18n="fees.tier.review.title">Document Review</h3>
+              <p class="tier-tagline" data-i18n="fees.tier.review.tagline">You prepare your application — we review before you submit.</p>
+              <ul>
+                <li data-i18n="fees.tier.review.f1">Expert review of forms & documents</li>
+                <li data-i18n="fees.tier.review.f2">Feedback on gaps & risks</li>
+                <li data-i18n="fees.tier.review.f3">Written recommendations</li>
+                <li data-i18n="fees.tier.review.f4">Peace of mind before filing</li>
+              </ul>
+              <p class="tier-from" data-i18n="fees.tier.from">Quoted after free consultation</p>
+            </div>
+            <div class="pricing-tier pricing-tier--guided" data-tier="guided" tabindex="0">
+              <div class="tier-step" aria-hidden="true">2</div>
+              <div class="tier-icon tier-icon--guided" aria-hidden="true"></div>
+              <span class="tier-badge" data-i18n="fees.tier.option2">Option 2</span>
+              <h3 data-i18n="fees.tier.guided.title">Guided Support</h3>
+              <p class="tier-tagline" data-i18n="fees.tier.guided.tagline">We coach you step-by-step while you prepare your file.</p>
+              <ul>
+                <li data-i18n="fees.tier.guided.f1">Personalized roadmap & checklist</li>
+                <li data-i18n="fees.tier.guided.f2">Help understanding forms & requirements</li>
+                <li data-i18n="fees.tier.guided.f3">Email/chat support when you're stuck</li>
+                <li data-i18n="fees.tier.guided.f4">You submit — we guide</li>
+              </ul>
+              <p class="tier-from" data-i18n="fees.tier.from">Quoted after free consultation</p>
+            </div>
+            <div class="pricing-tier pricing-tier--full featured" data-tier="full" tabindex="0">
+              <div class="tier-step" aria-hidden="true">3</div>
+              <div class="tier-icon tier-icon--full" aria-hidden="true"></div>
+              <span class="tier-badge" data-i18n="fees.tier.option3">Option 3 · Most popular</span>
+              <h3 data-i18n="fees.tier.full.title">Full Representation</h3>
+              <p class="tier-tagline" data-i18n="fees.tier.full.tagline">We manage your application from start to finish.</p>
+              <ul>
+                <li data-i18n="fees.tier.full.f1">Eligibility assessment & strategy</li>
+                <li data-i18n="fees.tier.full.f2">Complete forms & document package</li>
+                <li data-i18n="fees.tier.full.f3">Submission & communication with IRCC</li>
+                <li data-i18n="fees.tier.full.f4">Representation until a decision</li>
+              </ul>
+              <p class="tier-from" data-i18n="fees.tier.from">Quoted after free consultation</p>
+            </div>
           </div>
-          <div class="pricing-tier" data-tier="guided" tabindex="0">
-            <span class="tier-badge" data-i18n="fees.tier.option2">Option 2</span>
-            <h3 data-i18n="fees.tier.guided.title">Guided Support</h3>
-            <p class="tier-tagline" data-i18n="fees.tier.guided.tagline">We coach you step-by-step while you prepare your file.</p>
-            <ul>
-              <li data-i18n="fees.tier.guided.f1">Personalized roadmap & checklist</li>
-              <li data-i18n="fees.tier.guided.f2">Help understanding forms & requirements</li>
-              <li data-i18n="fees.tier.guided.f3">Email/chat support when you're stuck</li>
-              <li data-i18n="fees.tier.guided.f4">You submit — we guide</li>
-            </ul>
-            <p class="tier-from" data-i18n="fees.tier.from">Quoted after free consultation</p>
+          <div class="pricing-tiers-cta">
+            <a href="contact.html#book" class="btn btn-primary" data-i18n="nav.book">Book my free consultation</a>
           </div>
-          <div class="pricing-tier featured" data-tier="full" tabindex="0">
-            <span class="tier-badge" data-i18n="fees.tier.option3">Option 3 · Most popular</span>
-            <h3 data-i18n="fees.tier.full.title">Full Representation</h3>
-            <p class="tier-tagline" data-i18n="fees.tier.full.tagline">We manage your application from start to finish.</p>
-            <ul>
-              <li data-i18n="fees.tier.full.f1">Eligibility assessment & strategy</li>
-              <li data-i18n="fees.tier.full.f2">Complete forms & document package</li>
-              <li data-i18n="fees.tier.full.f3">Submission & communication with IRCC</li>
-              <li data-i18n="fees.tier.full.f4">Representation until a decision</li>
-            </ul>
-            <p class="tier-from" data-i18n="fees.tier.from">Quoted after free consultation</p>
-          </div>
-        </div>
-        <div class="pricing-tiers-cta">
-          <a href="contact.html#book" class="btn btn-primary" data-i18n="nav.book">Book my free consultation</a>
-        </div>
+        </section>
 
         <div class="fees-page-tabs">
           <button type="button" class="fees-tab active" data-fees-tab="temp" data-i18n="fees.tab.temp">Temporary Residence</button>

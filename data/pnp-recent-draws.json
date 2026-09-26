@@ -1,0 +1,69 @@
+{
+  "_note": "Fallback only — canonical data is js/pnp-recent-draws-data.js (embedded PNP_DRAWS_DATA).",
+  "bc": [
+    { "date": "2026-09-22", "stream": "Entrepreneur Immigration (Base)", "minScore": 119, "invites": 10 },
+    { "date": "2026-09-17", "stream": "CARE: TRHSI — Rural/Remote Health Support", "minScore": 60, "invites": 33 },
+    { "date": "2026-09-10", "stream": "CARE: Childcare (ECE NOC 42202)", "minScore": 99, "invites": 182 },
+    { "date": "2026-09-10", "stream": "BUILD: Construction trades", "minScore": 94, "invites": 104 },
+    { "date": "2026-08-20", "stream": "INNOVATE: High economic impact / tech", "minScore": 132, "invites": 265 }
+  ],
+  "oinp": [
+    { "date": "2026-09-15", "stream": "Human Capital Priorities (EE)", "minScore": 468, "invites": 1200 },
+    { "date": "2026-08-28", "stream": "Skilled Trades (EE-linked)", "minScore": 52, "invites": 890 },
+    { "date": "2026-06-19", "stream": "Foreign Worker — EOI (130-pt grid)", "minScore": 42, "invites": 210 },
+    { "date": "2026-05-22", "stream": "Masters Graduate stream", "minScore": "—", "invites": 85, "tone": "closed" }
+  ],
+  "sk": [
+    { "date": "2026-09-11", "stream": "Express Entry", "minScore": 92, "invites": 145 },
+    { "date": "2026-08-14", "stream": "Express Entry", "minScore": 88, "invites": 132 }
+  ],
+  "aaip": [
+    { "date": "2026-09-09", "stream": "Dedicated Health Care Pathway — Express Entry", "minScore": 60, "invites": 51 },
+    { "date": "2026-09-01", "stream": "Alberta Opportunity Stream (in-province workers)", "minScore": 56, "invites": 575 }
+  ],
+  "mpnp": [
+    { "date": "2026-08-08", "stream": "Skilled Workers in Manitoba", "minScore": 823, "invites": 412 },
+    { "date": "2026-07-11", "stream": "Skilled Workers Overseas", "minScore": 720, "invites": 89 }
+  ],
+  "nb": [
+    { "date": "2026-07-16", "stream": "NB Express Entry Stream", "minScore": 67, "invites": 115 },
+    { "date": "2026-07-18", "stream": "NB Skilled Worker Stream", "minScore": 60, "invites": 209 }
+  ],
+  "nl": [
+    { "date": "2026-09-18", "stream": "NLPNP + AIP (Immigration Accelerator)", "minScore": 67, "invites": 62 },
+    { "date": "2026-09-10", "stream": "NLPNP pathway nominations", "minScore": 67, "invites": 36 },
+    { "date": "2026-08-26", "stream": "NLPNP + AIP combined round", "minScore": 67, "invites": 140 },
+    { "date": "2026-07-28", "stream": "NLPNP + AIP combined round", "minScore": 67, "invites": 445 },
+    { "date": "2026-05-11", "stream": "NLPNP + AIP combined round", "minScore": 67, "invites": 186 }
+  ],
+  "nt": [
+    { "date": "2026-08-26", "stream": "Employer-Driven EOI (all pathways)", "minScore": "TBA", "invites": "Pending" },
+    { "date": "2026-06-25", "stream": "NWT Express Entry", "minScore": "336–590", "invites": 40 },
+    { "date": "2026-06-25", "stream": "Skilled Worker", "minScore": "336–590", "invites": 20 }
+  ],
+  "pei": [
+    { "date": "2026-09-17", "stream": "Labour Impact & Express Entry", "minScore": "Not disclosed", "invites": 195 },
+    { "date": "2026-08-20", "stream": "Labour Impact & Express Entry", "minScore": "Not disclosed", "invites": 181 },
+    { "date": "2026-07-16", "stream": "Labour Impact & Express Entry", "minScore": "Not disclosed", "invites": 195 },
+    { "date": "2026-06-18", "stream": "Labour Impact & Express Entry", "minScore": "Not disclosed", "invites": 182 },
+    { "date": "2026-01-15", "stream": "Labour Impact & Express Entry", "minScore": "Not disclosed", "invites": 26 }
+  ],
+  "qc": [
+    { "date": "2026-09-18", "stream": "PSTQ Stream 1 — Highly Qualified & Specialized", "minScore": 612, "invites": 890 },
+    { "date": "2026-09-18", "stream": "PSTQ Stream 2 — Intermediate & Manual Skills", "minScore": 618, "invites": 245 },
+    { "date": "2026-09-18", "stream": "PSTQ Stream 3 — Regulated Professions", "minScore": 392, "invites": 98 },
+    { "date": "2026-08-20", "stream": "PSTQ Stream 1 — Highly Qualified & Specialized", "minScore": 585, "invites": 1120 }
+  ],
+  "ynp": [
+    { "date": "2026-07-06 – 2026-07-17", "stream": "Employer EOI intake period 2", "minScore": "Priority grid", "invites": "Closed", "tone": "closed" },
+    { "date": "2026-01-19 – 2026-01-30", "stream": "Employer EOI intake period 1", "minScore": "Priority grid", "invites": "Closed", "tone": "closed" },
+    { "date": "2026-01-14", "stream": "2026 federal allocation to YNP", "minScore": "—", "invites": 282, "tone": "quota" }
+  ],
+  "ns": [
+    { "date": "2026-09-12", "stream": "Labour Market Priorities (EE — healthcare NOCs)", "minScore": "CRS profile", "invites": 42 },
+    { "date": "2026-08-28", "stream": "Labour Market Priorities (EE — education sector)", "minScore": "CRS profile", "invites": 38 },
+    { "date": "2026-07-31", "stream": "Labour Market Priorities (EE — skilled trades)", "minScore": "CRS profile", "invites": 55 },
+    { "date": "2026-07-03", "stream": "Labour Market Priorities (EE — tech NOCs)", "minScore": "CRS profile", "invites": 47 },
+    { "date": "2026-04-24", "stream": "Skilled Worker (employer-supported)", "minScore": "—", "invites": 19 }
+  ]
+}

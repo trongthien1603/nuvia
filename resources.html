@@ -61,19 +61,51 @@
 
         <div class="tools-grid">
           <article class="tool-card tool-card-featured">
-            <span class="tool-badge" aria-hidden="true">IRCC</span>
+            <div class="tool-card-head">
+              <span class="tool-badge" aria-hidden="true">IRCC</span>
+              <div class="tool-indicators">
+                <span class="tool-indicator tool-indicator--live" data-i18n="resources.indicator.live">Live updates</span>
+                <span class="tool-indicator tool-indicator--popular" data-i18n="resources.indicator.popular">Popular</span>
+              </div>
+            </div>
             <h3 data-i18n="resources.irccHub.title">IRCC Processing Times &amp; Backlog</h3>
             <p data-i18n="resources.irccHub.desc">Live weekly processing times for work, study, visitor, and super visas — plus how IRCC manages application inventory and wait times.</p>
             <p class="tool-source" data-i18n="resources.source.ircc">Source: IRCC / Government of Canada</p>
-            <a href="processing-times.html" class="btn btn-primary" data-i18n="resources.processing.openLive">View Live Times</a>
+            <div class="tool-card-cta">
+              <a href="processing-times.html" class="btn btn-primary" data-i18n="resources.processing.openLive">View Live Times</a>
+            </div>
+            <div class="tool-card-cta-extra" aria-hidden="true"></div>
           </article>
 
-          <article class="tool-card">
-            <span class="tool-badge" aria-hidden="true">CRS</span>
+          <article class="tool-card tool-card-featured">
+            <div class="tool-card-head">
+              <span class="tool-badge" aria-hidden="true">CRS</span>
+            </div>
             <h3 data-i18n="resources.crs.title">CRS Score Calculator</h3>
-            <p data-i18n="resources.crs.desc">Calculate your Comprehensive Ranking System score for Express Entry.</p>
-            <p class="tool-source" data-i18n="resources.source.ircc">Source: IRCC / Government of Canada</p>
-            <a href="https://www.cic.gc.ca/english/immigrate/skilled/crs-tool.asp" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
+            <p data-i18n="resources.crs.desc">Calculate your Comprehensive Ranking System score for Express Entry on our site — plus recent draw cut-offs.</p>
+            <p class="tool-source" data-i18n="resources.crs.source">Based on IRCC CRS factors (estimate only)</p>
+            <div class="tool-card-cta">
+              <a href="express-entry.html" class="btn btn-primary" data-i18n="resources.crs.open">Use calculator</a>
+            </div>
+            <div class="tool-card-cta-extra">
+              <a href="https://www.cic.gc.ca/english/immigrate/skilled/crs-tool.asp" class="btn btn-outline" target="_blank" rel="noopener noreferrer" data-i18n="resources.crs.official">Official IRCC tool</a>
+            </div>
+          </article>
+
+          <article class="tool-card tool-card-featured">
+            <div class="tool-card-head">
+              <span class="tool-badge" aria-hidden="true">PNP</span>
+              <div class="tool-indicators">
+                <span class="tool-indicator tool-indicator--frequent" data-i18n="resources.indicator.frequent">Frequently visited</span>
+              </div>
+            </div>
+            <h3 data-i18n="services.pnp.title">Provincial Nominee Programs (PNP)</h3>
+            <p data-i18n="pnp.calc.hero.desc">Select a province to view the latest draw snapshot, run a quick score estimate, and open the official portal.</p>
+            <p class="tool-source" data-i18n="pnp.calc.drawNote">Draw data is updated manually from official provincial sources — confirm on the portal before decisions.</p>
+            <div class="tool-card-cta">
+              <a href="pnp.html" class="btn btn-primary" data-i18n="pnp.openCalc">Draws & calculator</a>
+            </div>
+            <div class="tool-card-cta-extra" aria-hidden="true"></div>
           </article>
 
           <article class="tool-card">
@@ -97,7 +129,7 @@
             <h3 data-i18n="resources.quebec.title">Quebec Immigration (Arrima)</h3>
             <p data-i18n="resources.quebec.desc">Explore Quebec immigration programs and create an Arrima profile.</p>
             <p class="tool-source" data-i18n="resources.source.quebec">Source: Ministère de l'Immigration du Québec</p>
-            <a href="https://www.immigration-quebec.gouv.qc.ca/en/immigration-quebec/arrima.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
+            <a href="https://www.quebec.ca/en/immigration/permanent/skilled-workers" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
           </article>
 
           <article class="tool-card">
@@ -113,25 +145,10 @@
             <h3 data-i18n="resources.levels.title">Canada's Immigration Levels</h3>
             <p data-i18n="resources.levels.desc">View Canada's annual immigration levels plan and admission targets by category.</p>
             <p class="tool-source" data-i18n="resources.source.ircc">Source: IRCC / Government of Canada</p>
-            <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/levels.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
+            <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
           </article>
 
-          <article class="tool-card">
-            <span class="tool-badge" aria-hidden="true">PNP</span>
-            <h3 data-i18n="resources.pnp.title">Provincial Nominee Programs (PNP)</h3>
-            <p data-i18n="resources.pnp.desc">Research PNP streams by province and compare pathways to permanent residence.</p>
-            <p class="tool-source" data-i18n="resources.source.ircc">Source: IRCC / Government of Canada</p>
-            <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="resources.openTool">Open Tool</a>
-          </article>
         </div>
-      </div>
-    </section>
-
-    <section class="pnp-resources-section">
-      <div class="container">
-        <h2 class="section-title" data-i18n="resources.pnpGrid.title">Provincial Nominee Programs by Province</h2>
-        <p class="pnp-section-intro" data-i18n="resources.pnpGrid.desc">Explore official PNP portals, draw results, and eligibility tools for every province and territory — plus Quebec's Arrima system.</p>
-        <div class="pnp-province-grid" id="pnp-programs-grid"></div>
       </div>
     </section>
 
@@ -207,7 +224,6 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/pnp-resources.js"></script>
   <script src="js/site-chrome.js"></script>
 </body>
 </html>
