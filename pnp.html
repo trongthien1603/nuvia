@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Provincial Nominee Programs (PNP) — draw snapshots, eligibility by stream, and score estimates for every province and territory.">
+  <title>Provincial Nominee Programs (PNP) | Nuvia Immigration Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body data-page-title="meta.pnpCalcTitle">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><div class="logo-mark"><img src="assets/logo.png" alt="" width="44" height="44"></div></a>
+      <div class="header-actions">
+        <nav class="nav-desktop">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="fees.html" data-i18n="nav.fees">Fees</a>
+          <a href="about.html" data-i18n="nav.about">About</a>
+          <a href="resources.html" class="active" data-i18n="nav.resources">Resources</a>
+          <a href="contact.html#book" class="btn btn-primary" style="padding: 0.625rem 1.25rem;" data-i18n="nav.book">Book my free consultation</a>
+        </nav>
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true"><img src="assets/flags/en.svg" alt="" class="lang-flag" width="22" height="15"> EN</button>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false"><img src="assets/flags/fr.svg" alt="" class="lang-flag" width="22" height="15"> FR</button>
+          <button type="button" class="lang-btn" data-lang="vi" aria-pressed="false"><img src="assets/flags/vi.svg" alt="" class="lang-flag" width="22" height="15"> VI</button>
+        </div>
+      </div>
+      <button class="nav-toggle" data-i18n-title="nav.toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav-mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="services.html" data-i18n="nav.services">Services</a>
+      <a href="fees.html" data-i18n="nav.fees">Fees</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="resources.html" data-i18n="nav.resources">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="ptime-hero-badge"><a href="resources.html" data-i18n="pnp.calc.backResources">← Resources</a></p>
+        <h1 data-i18n="services.pnp.title">Provincial Nominee Programs (PNP)</h1>
+        <p data-i18n="pnp.calc.hero.desc">Choose a province or territory — view draw snapshots, estimate your score, and read common questions.</p>
+      </div>
+    </section>
+
+    <section class="bg-light" id="pnp-overview">
+      <div class="container pnp-calc-overview">
+        <p class="services-pnp-grid-intro" data-i18n="services.pnp.provincesDesc">Each card links to that program’s draw table, eligibility streams, calculator, and official portal.</p>
+        <div class="pnp-province-grid pnp-calc-province-grid" id="pnp-province-picker"></div>
+      </div>
+    </section>
+
+    <div id="pnp-program-detail" hidden>
+      <nav class="program-quick-nav" aria-label="PNP programs">
+        <div class="container program-quick-nav-inner" id="pnp-quick-nav"></div>
+      </nav>
+      <div class="container program-detail-toolbar">
+        <button type="button" class="program-back-btn" id="pnp-back-btn" data-i18n="pnp.calc.allProvinces">← All provinces & territories</button>
+      </div>
+      <div id="pnp-program-sections"></div>
+    </div>
+
+    <section class="cta-banner">
+      <div class="container">
+        <h2 data-i18n="pnp.calc.cta.title">Need a full PNP strategy?</h2>
+        <p data-i18n="pnp.calc.cta.desc">Book a free consultation — we match your profile to the right provincial stream.</p>
+        <a href="contact.html#book" class="btn btn-outline" data-i18n="nav.book">Book my free consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="rcic-disclosure" data-i18n-html="footer.disclosure"></div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-mark">
+              <img src="assets/logo.png" alt="" width="44" height="44">
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Nuvia Immigration</span>
+              <span class="logo-tagline" data-i18n="footer.tagline">Regulated Canadian Immigration Consultants</span>
+            </div>
+          </a>
+          <p data-i18n="footer.desc">Professional immigration consulting services.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.services">Services</h4>
+          <a href="services.html">Express Entry</a>
+          <a href="services.html">PNP</a>
+          <a href="fees.html" data-i18n="nav.fees">Fees</a>
+          <a href="resources.html" data-i18n="footer.resources">Resources</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.company">Company</h4>
+          <a href="about.html" data-i18n="footer.about">About Us</a>
+          <a href="contact.html" data-i18n="footer.contact">Contact</a>
+          <a href="processing-times.html" data-i18n="ptime.nav">Processing Times</a>
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <a href="mailto:nuvia.immigration@gmail.com" data-config="email">nuvia.immigration@gmail.com</a>
+          <a href="tel:+15148958603" data-config="phone">+1 (514) 895-8603</a>
+          <div class="footer-social">
+            <a href="https://wa.me/15148958603" class="social-link-card whatsapp" data-config="whatsapp" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/whatsapp.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.whatsapp">WhatsApp</span>
+            </a>
+            <a href="https://zalo.me/15148958603" class="social-link-card zalo" data-config="zalo" target="_blank" rel="noopener noreferrer">
+              <span class="social-link-icon"><img src="assets/icons/zalo.svg" alt="" width="24" height="24"></span>
+              <span class="social-link-label" data-i18n="contact.zalo">Zalo</span>
+            </a>
+          </div>
+          <span class="footer-text" data-config="location">Montreal, Quebec, Canada</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 Nuvia Immigration Consulting. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="privacy.html" data-i18n="footer.privacy.link">Privacy</a>
+          <a href="terms.html" data-i18n="footer.terms.link">Terms</a>
+          <a href="https://www.college-ic.ca" target="_blank" rel="noopener noreferrer">CICC</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pnp-draws-data.js"></script>
+  <script src="js/pnp-program-profiles.js"></script>
+  <script src="js/pnp-resources.js"></script>
+  <script src="js/pnp-program-status.js"></script>
+  <script src="js/pnp-stream-details.js"></script>
+  <script src="js/pnp-stream-eligibility.js"></script>
+  <script src="js/pnp-program-sidebar.js"></script>
+  <script src="js/pnp-faq-data.js"></script>
+  <script src="js/pnp-recent-draws-data.js"></script>
+  <script src="js/pnp-calculator-patches.js"></script>
+  <script src="js/pnp-i18n.js"></script>
+  <script src="js/ircc-express-entry-draws.js"></script>
+  <script src="js/pnp-draws-live.js"></script>
+  <script src="js/pnp-calculators.js"></script>
+  <script src="js/site-chrome.js"></script>
+</body>
+</html>

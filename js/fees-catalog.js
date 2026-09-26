@@ -1,8 +1,7 @@
 const FEES_CATALOG = {
   consult: [
-    { titleKey: "fees.consult.15", fee: "Free", flat: true, noteKey: "fees.consult.15.note", includesKeys: ["fees.includes.consult.1", "fees.includes.consult.2", "fees.includes.consult.3"] },
-    { titleKey: "fees.consult.30", fee: "$175", flat: true, noteKey: "fees.consult.credit", includesKeys: ["fees.includes.consult.4", "fees.includes.consult.5", "fees.includes.consult.6"] },
-    { titleKey: "fees.consult.60", fee: "$300", flat: true, noteKey: "fees.consult.credit", includesKeys: ["fees.includes.consult.4", "fees.includes.consult.5", "fees.includes.consult.7"] },
+    { titleKey: "fees.consult.up30", variant: "free", fee: "Free", hideTax: true, noteKey: "fees.consult.up30.note" },
+    { titleKey: "fees.consult.over30", variant: "extended", fee: "$199", feeSuffixKey: "fees.consult.feeSuffixHr", feeLabelKey: "fees.col.consultRate", noteKey: "fees.consult.over30.note" },
   ],
   temp: [
     { titleKey: "fees.temp.visitor", review: "$250 – $450", guided: "$400 – $700", full: "$800 – $1,500", govKey: "fees.temp.visitor.gov", includesKeys: ["fees.includes.temp.1", "fees.includes.temp.2", "fees.includes.temp.3", "fees.includes.temp.4"] },
@@ -52,27 +51,50 @@ function tFee(key, fallback) {
   return window.NuviaI18n ? window.NuviaI18n.t(key) : fallback;
 }
 
-function renderConsultFeeCard(item, index) {
+function renderConsultFeeCard(item) {
   const title = tFee(item.titleKey, item.titleKey);
+  const variant = item.variant || (item.hideTax ? "free" : "extended");
   const noteKey = item.noteKey || "";
   const note = noteKey
-    ? `<p class="fees-consult-card-note" data-i18n="${noteKey}">${tFee(noteKey, noteKey)}</p>`
+    ? `<p class="fees-consult-tile-note" data-i18n="${noteKey}">${tFee(noteKey, noteKey)}</p>`
     : "";
-  const includes = item.includesKeys
-    .map((key) => `<li data-i18n="${key}">${tFee(key, key)}</li>`)
-    .join("");
+
+  const taxNote = item.hideTax
+    ? ""
+    : `<span class="fees-consult-tile-tax fee-tax-note" data-i18n="fees.tax.note">+ tax if applicable</span>`;
+
+  const feeSuffix = item.feeSuffixKey
+    ? `<span class="fees-consult-tile-rate-suffix" data-i18n="${item.feeSuffixKey}">${tFee(item.feeSuffixKey, item.feeSuffixKey)}</span>`
+    : "";
+
+  const priceBlock =
+    variant === "free"
+      ? `<div class="fees-consult-tile-price">
+          <span class="fees-consult-tile-free" data-i18n="fees.consult.freeBadge">${item.fee}</span>
+        </div>`
+      : `<div class="fees-consult-tile-price fees-consult-tile-price--hourly">
+          <span class="fees-consult-tile-amount">${item.fee}</span>
+          ${feeSuffix}
+          ${taxNote}
+        </div>`;
+
+  const bookCta =
+    variant === "free"
+      ? `<a href="contact.html#book" class="btn btn-primary fees-consult-tile-cta" data-i18n="nav.book">Book my free consultation</a>`
+      : "";
+
+  const featuredBadge =
+    variant === "free"
+      ? `<span class="fees-consult-tile-tag" data-i18n="fees.consult.included">Included</span>`
+      : "";
 
   return `
-    <article class="fees-consult-card">
-      <h3 data-i18n="${item.titleKey}">${title}</h3>
-      <div class="fees-consult-price">
-        <span class="fee-label" data-i18n="fees.col.consult">Consultation Fee</span>
-        <strong>${item.fee}</strong>
-        <span class="fee-tax-note" data-i18n="fees.tax.note">+ tax if applicable</span>
-      </div>
+    <article class="fees-consult-tile fees-consult-tile--${variant}">
+      ${featuredBadge}
+      <h3 class="fees-consult-tile-title" data-i18n="${item.titleKey}">${title}</h3>
+      ${priceBlock}
+      ${bookCta}
       ${note}
-      <h4 class="pricing-service-includes-title" data-i18n="fees.includes.consultHeading">Consultation includes:</h4>
-      <ul class="pricing-service-includes">${includes}</ul>
     </article>
   `;
 }
@@ -143,7 +165,7 @@ function renderFeeServiceCard(item, index) {
 function renderFeesCatalog(container, items) {
   if (!container || !items?.length) return;
   if (container.dataset.catalog === "consult") {
-    container.innerHTML = items.map((item, index) => renderConsultFeeCard(item, index)).join("");
+    container.innerHTML = items.map((item) => renderConsultFeeCard(item)).join("");
     return;
   }
   container.innerHTML = items.map((item, index) => renderFeeServiceCard(item, `${container.dataset.catalog}-${index}`)).join("");
@@ -183,7 +205,7 @@ function initFeesCatalog() {
 
   bindFeesCatalogToggles();
 
-  if (window.NuviaI18n) window.NuviaI18n.applyTranslations();
+  if (window.NuviaI18n) window.NuviaI18n.applyStaticTranslations(window.NuviaI18n.getLang());
 }
 
 document.addEventListener("DOMContentLoaded", initFeesCatalog);
