@@ -4,7 +4,7 @@
  */
 
 const PNP_DRAWS_LIMIT = 12;
-const PNP_DRAWS_CACHE_VERSION = "v7";
+const PNP_DRAWS_CACHE_VERSION = "v8";
 
 function normalizeDrawRow(row) {
   if (!row) return null;

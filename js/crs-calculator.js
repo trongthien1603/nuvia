@@ -240,6 +240,21 @@ function formatInviteCount(value) {
   return String(value);
 }
 
+function latestDrawDateLabel(rows, dateKey = "date") {
+  if (!rows.length) return null;
+  return rows[0][dateKey] ?? null;
+}
+
+function drawTableRowClass(row, latestDate, { dateKey = "date", skipTones = [] } = {}) {
+  const tone = row.tone || "";
+  if (skipTones.includes(tone)) return tone === "closed" || tone === "quota" ? "pnp-draw-closed" : "";
+  const classes = [];
+  const date = row[dateKey];
+  if (latestDate && date === latestDate) classes.push("pnp-draw-latest");
+  if (tone === "closed" || tone === "quota") classes.push("pnp-draw-closed");
+  return classes.join(" ");
+}
+
 function renderCrsDrawsRows(draws) {
   const tbody = document.getElementById("crs-draws-body");
   const status = document.getElementById("crs-draws-status");
@@ -249,11 +264,12 @@ function renderCrsDrawsRows(draws) {
     if (status) status.textContent = "";
     return;
   }
+  const latestDate = latestDrawDateLabel(draws);
   tbody.innerHTML = draws
-    .map(
-      (row) =>
-        `<tr><td>${row.date}</td><td>${row.program}</td><td>${row.score}</td><td>${formatInviteCount(row.invites)}</td></tr>`
-    )
+    .map((row) => {
+      const cls = drawTableRowClass(row, latestDate);
+      return `<tr${cls ? ` class="${cls}"` : ""}><td>${row.date}</td><td>${row.program}</td><td>${row.score}</td><td>${formatInviteCount(row.invites)}</td></tr>`;
+    })
     .join("");
   if (status) status.textContent = crsT("crs.draws.live", "Loaded from official IRCC data.");
 }

@@ -5316,18 +5316,18 @@ body.modal-open {
 }
 
 .crs-draws-table-wrap .crs-draws-table tbody tr.pnp-draw-latest {
-  background: rgba(0, 86, 179, 0.1);
+  background: rgba(0, 86, 179, 0.09);
   font-weight: 600;
   color: var(--color-navy);
 }
 
 .crs-draws-table-wrap .crs-draws-table tbody tr.pnp-draw-latest td {
-  border-top: 2px solid var(--color-primary);
+  border-bottom-color: rgba(0, 86, 179, 0.14);
 }
 
 .crs-draws-table-wrap .crs-draws-table tbody tr.pnp-draw-latest:hover {
-  background: rgba(0, 86, 179, 0.14);
-  box-shadow: inset 3px 0 0 var(--color-primary);
+  background: rgba(0, 86, 179, 0.13);
+  box-shadow: none;
 }
 
 .crs-draws-table-wrap .crs-draws-table tbody tr.pnp-draw-closed {

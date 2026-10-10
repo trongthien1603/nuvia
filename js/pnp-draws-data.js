@@ -6,9 +6,9 @@ const PNP_CALCULATOR_PROGRAMS = [
     titleKey: "pnp.ab.title",
     provinceKey: "pnp.ab.province",
     officialUrl: "https://www.alberta.ca/alberta-advantage-immigration-program",
-    drawSourceUrl: "https://www.alberta.ca/alberta-advantage-immigration-program",
+    drawSourceUrl: "https://www.alberta.ca/aaip-processing-information",
     maxPoints: 100,
-    lastDraw: { date: "2025-08-22", stream: "Alberta Opportunity Stream (EOI)", minScore: 39, invites: "—" },
+    lastDraw: { date: "2026-09-23", stream: "Alberta Opportunity Stream", minScore: 58, invites: 113 },
     fields: [
       { name: "age", labelKey: "pnp.calc.age", type: "select", options: [{ v: 0, l: "18–20 (0)" }, { v: 5, l: "21–30 (5)" }, { v: 10, l: "31–40 (10)" }, { v: 5, l: "41+ (5)" }] },
       { name: "edu", labelKey: "pnp.calc.edu", type: "select", options: [{ v: 0, l: "High school (0)" }, { v: 10, l: "Post-secondary (10)" }, { v: 15, l: "Bachelor+ (15)" }] },
@@ -24,7 +24,7 @@ const PNP_CALCULATOR_PROGRAMS = [
     officialUrl: "https://www.welcomebc.ca/Immigrate-to-B-C/Invitations-to-Apply",
     drawSourceUrl: "https://www.welcomebc.ca/Immigrate-to-B-C/Invitations-to-Apply",
     maxPoints: 200,
-    lastDraw: { date: "2025-09-09", stream: "Skilled Worker (SIRS)", minScore: 128, invites: "~180" },
+    lastDraw: { date: "2026-09-24", stream: "INNOVATE: High Economic Impact", minScore: 131, invites: 714 },
     fields: [
       { name: "job", labelKey: "pnp.calc.bcJob", type: "select", options: [{ v: 0, l: "No BC job offer (0)" }, { v: 15, l: "Skilled job offer (15)" }, { v: 30, l: "Regional / in-demand (30)" }] },
       { name: "wage", labelKey: "pnp.calc.wage", type: "select", options: [{ v: 0, l: "Below median (0)" }, { v: 10, l: "At/above median (10)" }, { v: 20, l: "Well above median (20)" }] },
@@ -40,7 +40,7 @@ const PNP_CALCULATOR_PROGRAMS = [
     officialUrl: "https://immigratemanitoba.com/",
     drawSourceUrl: "https://immigratemanitoba.com/draws/",
     maxPoints: 1000,
-    lastDraw: { date: "2025-08-08", stream: "Skilled Workers in Manitoba", minScore: 823, invites: "—" },
+    lastDraw: { date: "2026-09-24", stream: "Skilled Worker in Manitoba (Draw #280)", minScore: 760, invites: 474 },
     fields: [
       { name: "age", labelKey: "pnp.calc.age", type: "select", options: [{ v: 0, l: "Under 21 or 51+ (0)" }, { v: 75, l: "21–45 (75)" }, { v: 50, l: "46–50 (50)" }, { v: 25, l: "51 (25)" }] },
       { name: "lang", labelKey: "pnp.calc.lang", type: "select", options: [{ v: 50, l: "CLB 5 (50)" }, { v: 125, l: "CLB 7 (125)" }, { v: 175, l: "CLB 8+ (175)" }] },
@@ -55,7 +55,7 @@ const PNP_CALCULATOR_PROGRAMS = [
     officialUrl: "https://www.welcomenb.ca/content/wel-bien/en/immigrating_and_working_in_new_brunswick/how_to_immigrate.html",
     drawSourceUrl: "https://www.gnb.ca/en/topic/family-home-community/immigration/invitation-selection-rounds.html",
     maxPoints: 100,
-    lastDraw: { date: "2025-07-15", stream: "Express Entry stream", minScore: "—", invites: "Targeted sectors" },
+    lastDraw: { date: "2026-09-17", stream: "NB Express Entry Stream", minScore: "—", invites: 102 },
     fields: [
       { name: "lang", labelKey: "pnp.calc.lang", type: "select", options: [{ v: 0, l: "CLB 5 (0)" }, { v: 10, l: "CLB 7 (10)" }, { v: 15, l: "CLB 9+ (15)" }] },
       { name: "edu", labelKey: "pnp.calc.edu", type: "select", options: [{ v: 0, l: "Below post-secondary (0)" }, { v: 5, l: "Diploma (5)" }, { v: 12, l: "Bachelor (12)" }, { v: 15, l: "Master+ (15)" }] },
@@ -85,7 +85,7 @@ const PNP_CALCULATOR_PROGRAMS = [
     officialUrl: "https://www.immigratenwt.ca/immigrate-here",
     drawSourceUrl: "https://www.immigratenwt.ca/expression-interest",
     maxPoints: 100,
-    lastDraw: { date: "2026-08-26", stream: "Employer-Driven EOI (all pathways)", minScore: "TBA", invites: "Pending" },
+    lastDraw: { date: "2026-09-25", stream: "Employer-Driven EOI (all pathways)", minScore: "317–492", invites: 105 },
     fields: [
       { name: "job", labelKey: "pnp.calc.job", type: "select", options: [{ v: 0, l: "No NWT job (0)" }, { v: 20, l: "Supported job offer (20)" }] },
       { name: "lang", labelKey: "pnp.calc.lang", type: "select", options: [{ v: 0, l: "Basic (0)" }, { v: 10, l: "CLB 6+ (10)" }] },
@@ -99,7 +99,7 @@ const PNP_CALCULATOR_PROGRAMS = [
     officialUrl: "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp",
     drawSourceUrl: "https://www.ontario.ca/page/invitations-apply-oinp#section-1",
     maxPoints: 130,
-    lastDraw: { date: "2026-09-15", stream: "Human Capital Priorities (EE)", minScore: 468, invites: 1200 },
+    lastDraw: { date: "2026-04-30", stream: "Employer Job Offer: Foreign Worker — GTA", minScore: "57+", invites: 786 },
     fields: [
       { name: "job", labelKey: "pnp.calc.job", type: "select", options: [{ v: 0, l: "No job offer (0)" }, { v: 10, l: "Valid job offer (10)" }] },
       { name: "wage", labelKey: "pnp.calc.wage", type: "select", options: [{ v: 0, l: "Below median (0)" }, { v: 8, l: "Above median (8)" }] },
@@ -129,7 +129,7 @@ const PNP_CALCULATOR_PROGRAMS = [
     officialUrl: "https://www.quebec.ca/en/immigration",
     drawSourceUrl: "https://www.quebec.ca/en/immigration/permanent/skilled-workers/skilled-worker-selection-program/invitation/2026",
     maxPoints: 1320,
-    lastDraw: { date: "2026-08-20", stream: "PSTQ Stream 1 — Highly Qualified & Specialized", minScore: 585, invites: 1120 },
+    lastDraw: { date: "2026-09-18", stream: "PSTQ Stream 1 — Highly Qualified & Specialized", minScore: 612, invites: 890 },
     fields: [
       { name: "lang", labelKey: "pnp.calc.french", type: "select", options: [{ v: 0, l: "A2 (0)" }, { v: 10, l: "B2 (10)" }, { v: 16, l: "C1+ (16)" }] },
       { name: "edu", labelKey: "pnp.calc.edu", type: "select", options: [{ v: 4, l: "Secondary (4)" }, { v: 8, l: "University (8)" }, { v: 12, l: "Master+ (12)" }] },
@@ -158,7 +158,7 @@ const PNP_CALCULATOR_PROGRAMS = [
     officialUrl: "https://novascotiaimmigration.com/",
     drawSourceUrl: "https://liveinnovascotia.com/eoi-selection",
     maxPoints: 100,
-    lastDraw: { date: "2026-09-12", stream: "Labour Market Priorities (EE — healthcare NOCs)", minScore: "CRS profile", invites: 42 },
+    lastDraw: { date: "2026-07-01 – 2026-07-31", stream: "EOI pool selection (monthly total)", minScore: "Not published", invites: 671 },
     fields: [
       { name: "lang", labelKey: "pnp.calc.lang", type: "select", options: [{ v: 0, l: "CLB 5 (0)" }, { v: 10, l: "CLB 7+ (10)" }] },
       { name: "work", labelKey: "pnp.calc.work", type: "select", options: [{ v: 0, l: "< 1 year (0)" }, { v: 10, l: "1+ year NS (10)" }] },
@@ -173,7 +173,7 @@ const PNP_CALCULATOR_PROGRAMS = [
     officialUrl: "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program",
     drawSourceUrl: "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers/international-skilled-worker-eoi-system",
     maxPoints: 110,
-    lastDraw: { date: "2026-09-11", stream: "Express Entry sub-category", minScore: 92, invites: 145 },
+    lastDraw: { date: "2026-09-15", stream: "Capped sector intake — Food Services", minScore: "EPA required", invites: 175 },
     fields: [
       { name: "lang", labelKey: "pnp.calc.lang", type: "select", options: [{ v: 0, l: "CLB 4 (0)" }, { v: 15, l: "CLB 7 (15)" }, { v: 20, l: "CLB 8+ (20)" }] },
       { name: "edu", labelKey: "pnp.calc.edu", type: "select", options: [{ v: 0, l: "Trade cert (0)" }, { v: 15, l: "Degree (15)" }, { v: 23, l: "Master+ (23)" }] },

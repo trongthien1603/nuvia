@@ -325,10 +325,14 @@ function renderPnpDrawRows(programId, rows) {
     if (status) status.textContent = "";
     return;
   }
+  const latestDate =
+    rows.find((r) => r.tone !== "closed" && r.tone !== "quota")?.date ?? rows[0]?.date ?? null;
   tbody.innerHTML = rows
-    .map((row, index) => {
+    .map((row) => {
       const classes = [];
-      if (index === 0 && row.tone !== "closed") classes.push("pnp-draw-latest");
+      if (latestDate && row.date === latestDate && row.tone !== "closed" && row.tone !== "quota") {
+        classes.push("pnp-draw-latest");
+      }
       if (row.tone === "closed" || row.tone === "quota") classes.push("pnp-draw-closed");
       const cls = classes.join(" ");
       return `<tr${cls ? ` class="${cls}"` : ""}><td>${row.date}</td><td>${row.stream}</td><td>${row.minScore}</td><td>${row.invites}</td></tr>`;
